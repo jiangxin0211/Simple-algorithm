@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 递归：自己调用自己，必须有出口
+    // 斐波那契数列，深克隆
+    // deepclone：实现一个对象的深度克隆，获得一份copy，而不是直接拿到引用值
+    // 出口：遍历对象结束后return
+    // 递归条件：遇到引用值array或object
+    function deepClone(origin,target) {//origin被克隆的对象，target获得的copy
+        var target = target || {};
+        for(var key in origin){
+            if (origin.hasOwnProperty(key)) {
+                if (Array.isArray(origin[key])) {
+                    target[key] = [];
+                    deepClone(origin[key], target[key])//递归
+                } else if (typeof origin[key] === 'object' && origin[key] !== null) {
+                    target[key] = {};
+                    deepClone(origin[key], target[key])// 递归
+                } else {
+                    target[key] = origin[key];
+                }
+            }
+        }
+        return target;
+    }
+
+    var arrayA = [1,2,3,4];
+    var arrayB = [];
+    deepClone(arrayA,arrayB);
+    console.log(arrayB);
+    console.log(arrayA);
+</script>
+</html>
