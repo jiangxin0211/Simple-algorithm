@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+   // 实现以下功能：
+    const co = require('co');
+    co(function *() {
+        const url = 'http://jasonplacerholder.typecoder.com/posts/1';
+        const response = yield fetch(url);
+        const post = yield response.json();
+        const title = post.title;
+        console.log('Title: ',title);
+    })
+
+   /*
+      第一步找出口，执行器返回的iterator如果状态为done，代表结束，可以出去
+      递归条件： 取到下一个iterator，进行递归，自我调用
+   */
+   function run(generat) {
+       const iterator = generat();
+       function autoRun(iteration) {
+           if(iteration.done) {return iteration.value}  //出口
+           const anotherPromise = iteration.value;
+           anoterPromise.then(x => {
+               return autoRun(iterator.next(x))  //递归条件
+           })
+       }
+       return autoRun(iterator.next())
+   }
+
+</script>
+</html>

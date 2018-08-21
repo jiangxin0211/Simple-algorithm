@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //Array数组的flat方法实现,实现扁平化嵌套数组
+    Array.prototype.flat = function () {
+        var arr = [];
+        this.forEach((item, idx) => {
+            if(Array.isArray(item)){
+                arr = arr.concat(item.flat());//递归去处理数组元素,concat()用来连接两个或多个数组
+            }else{
+                arr.push(item);//非数组元素直接push进去
+            }
+        });
+        return arr;
+    };
+    var arrA = [1,[2,3,4],5,[6],7];
+    var arrB = [1,[2,[3,4]],5,[6],7];
+
+    console.log(arrA.flat());
+    console.log(arrB.flat());
+
+
+    //优化的方法
+    /*
+    1.toString方法，连接数组并返回一个字符串 '2,2,3,2,3,4'
+    2.split方法分割字符串，变成数组['2','2','3','2','3','4']
+    3.map方法，将string映射成为number类型2,2,3,2,3,4
+     */
+    arr.prototype.flat = function () {
+        this.toString().split(',').map(item => +item )
+    };
+    var arrC = [1,[2,[3,4]],5,[6],7];
+    console.log(arrC.flat());
+</script>
+</html>
