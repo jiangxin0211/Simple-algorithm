@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 插入排序： 扑克牌原理，将待排的第一个记录看成一个有序段，比左边小放左边与左边依次比较；每个元素依次与左边的有序段比较
+    // 注意：i是外循环，默认arr[0]是有序段，所以i从1开始；j进来后与前面的有序段依次比较，因为前面是有序的，所以只要循环比较交换即可
+    // arr[j]>=arr[j+1]时，无需比较，直接跳下一次循环
+    function insertSort (arr) {
+        var len = arr.length;
+        for (let i = 1 ; i < len ; i++) {
+            for (let j = i ; j>0 ; j--) {
+                if (arr[j] < arr[j - 1]) {
+                    [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]];
+                }else{
+                    break;
+                }
+            }
+        }
+        return arr;
+    }
+    console.log(insertSort([3, 7, 2, 5, 1]));
+</script>
+</html>

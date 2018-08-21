@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 快速排序：是处理大数据最快的算法之一；通过递归的方式将数据分解为含有较小元素和较大元素的不同子序列，该算法不断重复这个步骤，知道序列有序
+    // 选择一个基准元素，将序列分为两个子序列，比它小的元素放左边，比他大的元素放右边，然后再分别对左边和右边的序列重复上述步骤直至全部有序
+    function quickSort(arr) {
+        if(arr.length <= 1){
+            return arr;//递归出口
+        }
+        var left = [];
+        var right = [];
+        var current = arr.splice(0, 1);// splice后，数组长度少了一个
+        for(let i = 0 ; i < arr.length ; i++ ){
+            if(arr[i] < current){
+                left.push(arr[i]);//放左边
+            }else{
+                right.push(arr[i]);//放右边
+            }
+        }
+        return quickSort(left).concat(current, quickSort(right));//递归
+    }
+    console.log(quickSort([3, 6, 1, 7, 2]));
+</script>
+</html>

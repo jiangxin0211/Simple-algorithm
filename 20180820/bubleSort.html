@@ -8,6 +8,36 @@
 
 </body>
 <script>
-    //冒泡排序：基本思想：
+    //冒泡排序：基本思想：逐个比较
+    // 注意：外层循环从最大值开始递减，因为内层循环是两两比较，因此当>=2时即可停止
+    //      内层循环两两比较，从0开始，比较inner和inner+1，因此临界条件是inner<outer-1
+    function bubleSort (arr) {
+        var len = arr.length;
+        for (let outer = len ; outer >= 2 ; outer --) {
+            for (let inner = 0 ; inner <= outer - 1 ; inner++) {
+                if (arr[inner] < arr[inner + 1]) {//倒序
+                    let temp = arr[inner];
+                    arr[inner] = arr[inner + 1];
+                    arr[inner + 1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+    console.log(bubleSort([5, 2, 7, 1, 4]));//倒序
+
+    // 使用es6的解构赋值来优化，不使用temp
+    function bubleSortA(arr) {
+        var len = arr.length;
+        for (let outer = len ; outer >= 2 ; outer --) {
+            for(let inner = 0 ; inner <= outer - 1 ; inner++){
+                if (arr[inner] > arr[inner + 1]) {//正序
+                    [arr[inner], arr[inner + 1]] = [arr[inner + 1], arr[inner]]
+                }
+            }
+        }
+        return arr;
+    }
+    console.log(bubleSortA([5, 2, 7, 1, 4]));//正序
 </script>
 </html>
