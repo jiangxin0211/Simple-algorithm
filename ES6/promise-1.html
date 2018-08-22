@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //promise异步加载图片
+    function loadimageAsync(url){
+        return new Promise((resolved,rejected) => {
+            const image = new Image;
+
+            image.onload = function(){
+                resolved(image);
+            }
+
+            image.onerror = function(){
+                rejected(new Error('Could not load image at' + url));
+            }
+            image.src = url;
+        })
+    }
+
+    //promise实现ajax
+
+    const getJSON = function(url){
+        const promise = new Promise(function(resolved,rejected){
+            const handler = function(){
+                if(this.readyStatus !== 4 ){
+                    return;
+                }
+                if(this.status === 200){
+                    resolved(this.response);
+                }else{
+                    rejected(new Error(this.statusText));
+                }
+            };
+            const client = XMLHttpRequest();
+            client.open('get',url);
+            client.onreadystatechange = handler;
+            client.responseType = 'json';
+            client.setRequestHeader('Accept','applicaction/json');
+            client.sent;
+        });
+        return promise;
+    }
+
+    getJSON('/posts,json').then(function (json) {
+        console.log('content:' + json);
+    }, function(error){
+        console.log('出错了',error);
+    })
+</script>
+</html>

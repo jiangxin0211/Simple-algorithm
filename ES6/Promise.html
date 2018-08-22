@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    promise异步编程的一种解决方案，里面保存着未来才会结束的事件
+    promise是一个object，可以获取异步操作的消息
+     */
+    /*
+        promise有三个状态：pending进行中 fulfilled已成功 rejected已失败 只有异步操作的结果才能决定哪种状态 resolved已定型特指fulfilled
+
+     */
+    const promise = new Promise(function(resolved,rejected) {//promise构造函数接受一个函数作为参数，该函数的两个参数分别是resolved，rejected
+        // ...some code
+        if (success) {
+            resolved(value);
+        }else{
+            rejected(error);
+        }
+    });
+
+    promise.then(function(value){
+            //sucess
+        }, function(error){
+            //failed
+        }
+    );
+
+    function timeout(ms){
+        return new Promise ((resolved,rejected) => {
+            setTimeout(resolved, ms, 'done')
+        });
+    }
+
+    timeout(100).then((value) => {//100ms后promise实例的状态变为resolved，会触发then方法绑定的回调函数
+        console.log(value);
+    })
+
+
+
+
+    let promise = new Promise(function(resolved,rejected){
+        console.log('promise');//promise新建后立即执行
+        resolve();
+    })
+
+    promise.then(function(){
+        console.log('resolved.');//then方法指定的回调函数，在当前脚本所有同步任务执行结束后才执行
+    })
+
+    console.log('hi!');
+    //promise hi! resolved
+</script>
+</html>
