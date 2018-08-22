@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    ES6 诞生以前，异步编程的方法，大概有下面四种:
+        回调函数
+        事件监听
+        发布/订阅
+        Promise 对象
+        Generator 函数将 JavaScript 异步编程带入了一个全新的阶段。
+     */
+    //依次读取两个文件，会产生多层嵌套，代码横向发展，多个异步操作形成了强耦合，
+    // 只要修改一个操作，上层回调函数和下层回调函数可能都需要修改，这种情况称为"回调地狱"
+    //promise的链式写法可解决回调地狱
+    fs.readFile(fileA, 'utf-8', function (err, data) {
+        fs.readFile(fileB, 'utf-8', function (err, data) {
+            // ...
+        });
+    });
+</script>
+</html>
