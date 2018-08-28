@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*// async是异步，await是等待一个异步方法完成后返回的值
+    // async与return的区别
+    async function testAsync(){
+        return 'hello world';
+    }
+    const result = testAsync();
+    // console.log(result);// 返回了一个promise对象
+    result.then(v => {
+     console.log(v);// 输出hello world 没有返回值的时候会是undefined
+    })
+
+
+    // await 等待返回值
+    function getSomething(){
+        return 'something'
+    }
+    async function testasync(){
+        return Promise.resolve('hello');
+    }
+    async function test(){
+        const v1 = await getSomething();
+        const v2 = await test();
+        console.log(v1);
+        console.log(v2);
+    }
+*/
+
+    //async和await一起使用的优势和作用:处理then链 捕捉错误
+    // setTimeout模拟异步
+    var fun = function(time) {
+        return new Promise((resolve,reject) => {
+            setTimeout(function(){
+                resolve('hello')
+            }, time)
+        })
+    }
+
+    fun(1000).then((v) => {
+        console.log(v);
+    })
+    // 改用async和await
+    var testAsync = function(time) {
+        return new Promise((resolve,reject) => {
+            setTimeout(function(){
+                resolve('hello')
+            }, time)
+        })
+    }
+
+    async function test(time){
+        const v = await testAsync(time);
+        console.log(v);
+    }
+    test(1000);
+
+
+</script>
+</html>
