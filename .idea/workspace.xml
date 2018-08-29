@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d88670df-03e8-40ef-9303-4c1181dee0ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ES6/ES7/async.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/DOMscripting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/data acess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/js/阶乘.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/loading&amp;execution.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,22 +27,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
+          <entry key="html" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="930" />
+          <entry key="html" value="2714" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="930" />
+          <entry key="HTML" value="2714" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -47,10 +51,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ES6/ES7/async.html">
+        <entry file="file://$PROJECT_DIR$/JavaScript/DOMscripting.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+            <state relative-caret-position="593">
+              <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -90,6 +94,11 @@
         <option value="$PROJECT_DIR$/ES6/Generator函数的异步应用.html" />
         <option value="$PROJECT_DIR$/ES6/async函数.html" />
         <option value="$PROJECT_DIR$/ES6/ES7/async.html" />
+        <option value="$PROJECT_DIR$/JavaScript/0827.html" />
+        <option value="$PROJECT_DIR$/JavaScript/loading&amp;execution.html" />
+        <option value="$PROJECT_DIR$/JavaScript/data acess.html" />
+        <option value="$PROJECT_DIR$/JavaScript/DOMscripting.html" />
+        <option value="$PROJECT_DIR$/JavaScript/js/阶乘.html" />
       </list>
     </option>
   </component>
@@ -118,7 +127,7 @@
             <path>
               <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="ES6" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -157,15 +166,16 @@
       <option name="presentableId" value="Default" />
       <updated>1534819718605</updated>
       <workItem from="1534819719880" duration="23365000" />
-      <workItem from="1535431818666" duration="3191000" />
+      <workItem from="1535431818666" duration="9406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26556000" />
+    <option name="totallyTimeSpent" value="32771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19698173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -323,6 +333,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/data acess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/loading&amp;execution.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/js/阶乘.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/DOMscripting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
         </state>
       </provider>
     </entry>

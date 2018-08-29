@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // dom的访问和修改    访问DOM次数越多，代码执行速度越慢
+
+    // 每次循环都会对DOM访问两次，一次读取innerHTML，一次写入
+    function innerHTMLLoop() {
+        for (var count = 0; count < 15000; count++) {
+            document.getElementById('here').innerHTML += 'a';
+        }
+    }
+    // 用局部变量存储更新后的内容，循环结束时一次性写入
+    function innerHTMLLoop2() {
+        var content = '';
+        for (var count = 0; count < 15000; count++) {
+            content += 'a';
+        }
+        document.getElementById('here').innerHTML += content;
+    }
+
+    /*
+    节点克隆  用element.cloneNode()代替document.createElement()
+     */
+
+    /*
+    HTML集合是用来存放DOM节点引用的类数组对象
+    document.getElementByName()    document.getElementByTagName()  document.getElementByClassName()
+    以上函数的返回值就是一个集合
+    以下也是：返回值均是HTMLCollection对象，类似数组的对象，但不是数组，有length属性  虚拟存在，底层文档更新时自动更新
+        document.images 所有的<img>
+        document.links  所有的<a>
+        document.forms  所有表单
+        document.forms[0].element 页面第一个表单中的所有的字段
+     */
+    //这个函数将一个HTML集合拷贝给一个数组
+    function toArray(coll) {
+        for (var i = 0, a = [], len = coll.length; i < len; i++) {
+            a[i] = coll[i];
+        }
+        return a;
+    }
+    // 设置一个集合并把它拷贝到数组
+    var coll = document.getElementsByTagName_r('div');
+    var ar = toArray(coll);// 通用的集合转数组函数
+    //比较下列两个函数
+    //slower
+    function loopCollection() {
+        for (var count = 0; count < coll.length; count++) {
+        }
+    }
+    // faster
+    function loopCopiedArray() {
+        for (var count = 0; count < arr.length; count++) {
+        }
+    }
+    // 当每次迭代过程访问集合的length属性时，优化方法是：将集合缓存到一个变量中，然后在循环判断条件中使用这个变量，因为遍历数组比遍历集合快
+    function loopCacheLengthCollection() {// 此函数运行的与loopCopiedArray一样快
+        var coll = document.getElementsByTagName_r('div'),
+            len = coll.length;
+        for (var count = 0; count < len; count++) {
+        }
+    }
+
+    /*
+    访问集合元素时使用局部变量
+     */
+</script>
+</html>

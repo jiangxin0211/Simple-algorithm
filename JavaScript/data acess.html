@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 数据访问
+    /*
+    javascript的四个数据存储位置：
+        直接量（代表自己）：字符串，数字，布尔值，对象，数组，函数，正则表达式，具有特殊意义的空值，以及未定义
+        变量：var创建用于存储数据值
+        数组项：基于数字索引，存储一个javascript数组对象
+        对象成员：具有字符串索引
+        前两个访问速度非常快，后两个需要更长时间
+     */
+    /*
+    作用域：
+        作用域链和标识符解析
+     */
+    var book = {
+        title: "High Performance JavaScript",
+        publisher: "Yahoo! Press"
+    };// 实例中没有该名称的成员就会搜索原型，因而可以访问原型中所有的属性和方法
+    console.log(book.hasOwnProperty("title")); //true  hasOwnProperty确定一个对象是否具有特定名称的实例成员
+    console.log(book.hasOwnProperty("toString")); //false
+    console.log("title" in book); //true  确定函数是否具有某个名称的属性用in，in既搜索实例又搜索原型
+    console.log("toString" in book); //true
+
+    /*
+        对象的原型决定了一个实例的类型，默认情况下，所有对象的实例都是object的实例，并继承了原型所有基本方法
+        可以使用"构造器"构造另一种类型的原型（_proto_）
+     */
+    function Book(title, publisher){
+        this.title = title;
+        this.publisher = publisher;
+    }
+    Book.prototype.sayTitle = function(){
+        console.log(this.title);
+    };
+    var book1 = new Book("High Performance JavaScript", "Yahoo! Press");
+    var book2 = new Book("JavaScript: The Good Parts", "Yahoo! Press");
+    console.log(book1 instanceof Book); //true
+    console.log(book1 instanceof Object); //true
+    book1.sayTitle(); //"High Performance JavaScript"
+    console.log(book1.toString()); //"[object Object]"
+</script>
+</html>
