@@ -47,7 +47,7 @@
         return a;
     }
     // 设置一个集合并把它拷贝到数组
-    var coll = document.getElementsByTagName_r('div');
+    var coll = document.getElementsByTagName('div');
     var ar = toArray(coll);// 通用的集合转数组函数
     //比较下列两个函数
     //slower
@@ -62,7 +62,7 @@
     }
     // 当每次迭代过程访问集合的length属性时，优化方法是：将集合缓存到一个变量中，然后在循环判断条件中使用这个变量，因为遍历数组比遍历集合快
     function loopCacheLengthCollection() {// 此函数运行的与loopCopiedArray一样快
-        var coll = document.getElementsByTagName_r('div'),
+        var coll = document.getElementsByTagName('div'),
             len = coll.length;
         for (var count = 0; count < len; count++) {
         }
@@ -70,6 +70,112 @@
 
     /*
     访问集合元素时使用局部变量
+        同一个DOM属性或方法被多次访问，最好把此DOM缓存到一个局部变量中，第一个优化是将集合引用存储于局部变量，并在循环之外缓存length属性
+     */
+    // slow
+    function collectionGlobal() {
+        var coll = document.getElementsByTagName('div'),
+            len = coll.length,
+            name = '';
+        for (var count = 0; count < len; count++) {
+            name = document.getElementsByTagName('div')[count].nodeName;
+            name = document.getElementsByTagName('div')[count].nodeType;
+            name = document.getElementsByTagName('div')[count].tagName;
+        }
+        return name;
+    };
+    // faster
+    function collectionLocal() {
+        var coll = document.getElementsByTagName('div'),
+            len = coll.length,
+            name = '';
+        for (var count = 0; count < len; count++) {
+            name = coll[count].nodeName;
+            name = coll[count].nodeType;
+            name = coll[count].tagName;
+        }
+        return name;
+    };
+    // fastest
+    function collectionNodesLocal() {
+        var coll = document.getElementsByTagName('div'),
+            len = coll.length,
+            name = '',
+            el = null;
+        for (var count = 0; count < len; count++) {
+            el = coll[count];
+            name = el.nodeName;
+            name = el.nodeType;
+            name = el.tagName;
+        }
+        return name;
+    };
+
+    // 获取DOM节点（子节点，兄弟节点）
+    // 非递归方式遍历元素子节点
+    function testNextSibling() {
+        var el = document.getElementById('mydiv'),
+            ch = el.firstChild,
+            name = '';
+        do {
+            name = ch.nodeName;
+        } while (ch = ch.nextSibling);
+        return name;
+    };
+    function testChildNodes() {
+        var el = document.getElementById('mydiv'),
+            ch = el.childNodes,
+            len = ch.length,
+            name = '';
+        for (var count = 0; count < len; count++) {
+            name = ch[count].nodeName;
+        }
+        return name;
+    };
+    console.log(name);
+
+    // childNodes,firstChild, nextSibling不区分注释节点和文本节点
+    /*
+    只表示元素节点的DOM属性：children,childElementCount,firstElementChild
+    和表示所有节点的属性：childNode,childNode.length,firstChild
+    children比childNodes更快，因为集合项少
+     */
+    var elements = document.querySelectorAll('#menu a');//接受一个CSS选择器字符串参数并返回一个nodeList--由符合条件的节点构成的类数组对象
+    var errs = document.querySelectorAll('div.warning, div.notice');
+    // 不使用querySelectAll
+    var errs = [],
+        divs = document.getElementsByTagName('div'),
+        classname = '';
+    for (var i = 0, len = divs.length; i < len; i++) {
+        classname = divs[i].className;
+        if (classname === 'notice' || classname === 'warning') {
+            errs.push(divs[i]);
+        }
+    }
+
+    // 重绘和重排版
+    /*
+     当浏览器下载完所有的页面HTML标记，javascript，css，图片之后，它解析文件并创建了两个数据结构：
+     一颗DOM树：表示页面结构
+     一个渲染树：表示DOM节点如何显示，"框"，"盒"
+     两颗树构建完成后，浏览器就可以绘制页面元素了
+     改变宽高（布局）会引起重构渲染树，称做重排。重排后再重绘
+      */
+    /*
+    引起重排的几个原因：
+        删除可见的DOM元素
+        元素位置改变
+        元素尺寸改变
+        内容改变
+        最初的页面渲染
+        浏览器窗口改变尺寸
+     */
+    /*
+    减少重绘和重排版：
+        改变风格：将多个DOM和风格改变合并到y一个批次中一次性执行
+        批量修改DOM：从文档流中摘除该元素，对其应用多层改变，将元素带回文档中
+        缓冲布局信息：减少对布局信息的查询
+        将元素提出动画流（折叠／展开）：使用绝对坐标定位页面的动画元素，使它位于页面布局流之外；启动元素动画；只下移一次文档其他元素位置
      */
 </script>
 </html>

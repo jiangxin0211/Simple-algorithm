@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d88670df-03e8-40ef-9303-4c1181dee0ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaScript/DOMscripting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScript/data acess.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScript/js/阶乘.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScript/loading&amp;execution.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/js/事件托管.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/DOMscripting.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/DOMscripting.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,22 +25,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="7" />
+          <entry key="html" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="7" />
+          <entry key="HTML" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2714" />
+          <entry key="html" value="3817" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2714" />
+          <entry key="HTML" value="3817" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -51,10 +49,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JavaScript/DOMscripting.html">
+        <entry file="file://$PROJECT_DIR$/JavaScript/js/事件托管.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+            <state relative-caret-position="465">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -97,8 +95,9 @@
         <option value="$PROJECT_DIR$/JavaScript/0827.html" />
         <option value="$PROJECT_DIR$/JavaScript/loading&amp;execution.html" />
         <option value="$PROJECT_DIR$/JavaScript/data acess.html" />
-        <option value="$PROJECT_DIR$/JavaScript/DOMscripting.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/阶乘.html" />
+        <option value="$PROJECT_DIR$/JavaScript/DOMscripting.html" />
+        <option value="$PROJECT_DIR$/JavaScript/js/事件托管.html" />
       </list>
     </option>
   </component>
@@ -166,12 +165,12 @@
       <option name="presentableId" value="Default" />
       <updated>1534819718605</updated>
       <workItem from="1534819719880" duration="23365000" />
-      <workItem from="1535431818666" duration="9406000" />
+      <workItem from="1535431818666" duration="13597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32771000" />
+    <option name="totallyTimeSpent" value="36962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -359,8 +358,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaScript/DOMscripting.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+        <state relative-caret-position="548">
+          <caret line="178" column="7" selection-start-line="178" selection-start-column="7" selection-end-line="178" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/js/事件托管.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
         </state>
       </provider>
     </entry>

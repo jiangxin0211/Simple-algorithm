@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    事件托管： 最小化事件句柄数量
+    事件的三个阶段：捕获（IE不支持捕获）；到达目标；冒泡
+     */
+    // 发送一个AJAX请求，不刷新页面就能够更新部分内容，用事件托管解决：挂接一个监听器，封装所有链接并监听所有的click事件，看看是否自法一个链接
+    document.getElementById('menu').onclick = function(e) {
+        // x-browser target
+        e = e || window.event;
+        var target = e.target || e.srcElement;
+        var pageid, hrefparts;
+        // only interesed in hrefs
+        // exit the function on non-link clicks
+        if (target.nodeName !== 'A') {
+            return;
+        }
+        // figure out page ID from the link
+        hrefparts = target.href.split('/');
+        pageid = hrefparts[hrefparts.length - 1];
+        pageid = pageid.replace('.html', '');
+        // update the page
+        ajaxRequest('xhr.php?page=' + id, updatePageContents);
+        // x-browser prevent default action and cancel bubbling
+        if (typeof e.preventDefault === 'function') {
+            e.preventDefault();
+            e.stopPropagation();
+        } else {
+            e.returnValue = false;
+            e.cancelBubble = true;
+        }
+    };
+    /*
+    跨浏览器部分：
+        访问事件对象，并判断事件源
+        结束文档树上的冒泡
+        阻止默认行为
+     */
+</script>
+</html>
