@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 字符串和正则表达式
+    // 通过减少回溯来提高正则表达式性能
+
+
+    // 定时器
+    /*
+    setTimeout（）创建一个定时器只运行一次
+    setInterval()函数创建一个周期性重复运行的定时器
+     */
+    var button = getElementById("my-button");
+    button.click = function(){
+        oneMethod();
+        setTimeout(function(){
+            document.getElementById("notice").style.color = "red";
+        }, 1500) // 第二个参数是指什么时候把任务添加到UI队列中，而不是被执行
+    };
+
+</script>
+</html>

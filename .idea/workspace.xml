@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d88670df-03e8-40ef-9303-4c1181dee0ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaScript/algorithms and flow control.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code review/code review.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20180820/二叉树和二叉查找树/二叉树.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20180820/二叉树和二叉查找树/二叉树的查找.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/strings and regular.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/algorithms and flow control.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/algorithms and flow control.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,22 +27,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="11" />
+          <entry key="html" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="11" />
+          <entry key="HTML" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="4681" />
+          <entry key="html" value="7285" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="4681" />
+          <entry key="HTML" value="7285" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -51,17 +53,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScript/algorithms and flow control.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="205">
+              <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JavaScript/strings and regular.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code review/code review.html">
+        <entry file="file://$PROJECT_DIR$/20180820/二叉树和二叉查找树/二叉树的查找.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+            <state relative-caret-position="165">
+              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -107,8 +118,11 @@
         <option value="$PROJECT_DIR$/JavaScript/js/阶乘.html" />
         <option value="$PROJECT_DIR$/JavaScript/DOMscripting.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/事件托管.html" />
-        <option value="$PROJECT_DIR$/JavaScript/algorithms and flow control.html" />
         <option value="$PROJECT_DIR$/code review/code review.html" />
+        <option value="$PROJECT_DIR$/JavaScript/algorithms and flow control.html" />
+        <option value="$PROJECT_DIR$/JavaScript/strings and regular.html" />
+        <option value="$PROJECT_DIR$/20180820/二叉树和二叉查找树/二叉树.html" />
+        <option value="$PROJECT_DIR$/20180820/二叉树和二叉查找树/二叉树的查找.html" />
       </list>
     </option>
   </component>
@@ -133,6 +147,22 @@
             <path>
               <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="20180820" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="20180820" type="462c0819:PsiDirectoryNode" />
+              <item name="二叉树和二叉查找树" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -171,12 +201,12 @@
       <option name="presentableId" value="Default" />
       <updated>1534819718605</updated>
       <workItem from="1534819719880" duration="23365000" />
-      <workItem from="1535431818666" duration="19744000" />
+      <workItem from="1535431818666" duration="29792000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43109000" />
+    <option name="totallyTimeSpent" value="53157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -376,17 +406,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/algorithms and flow control.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code review/code review.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/algorithms and flow control.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20180820/二叉树和二叉查找树/二叉树.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="109" column="24" lean-forward="true" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/strings and regular.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20180820/二叉树和二叉查找树/二叉树的查找.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
         </state>
       </provider>
     </entry>

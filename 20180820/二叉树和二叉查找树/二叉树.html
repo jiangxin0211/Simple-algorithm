@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    二叉树：一种特殊的树，子节点最多有两个
+    二叉查找树： 一种特殊的树，较小的值保存在左节点，较大的值保存在右节点
+     */
+    // 二叉树的最小元素是节点，先定义一个节点
+    function Nodes(left, right, data) {
+        this.left = left;
+        this.right = right;
+        this.data = data;
+        this.show = () => {
+            return this.data;
+        }
+    }// 二叉树最小结构单元
+    // 二叉树
+    /*
+    初始化时，只有一个根节点。利用二叉查找树的规则，定义一个插入方法
+    1.判断BST.root === null, 那么将此节点当作子节点
+    2.判断BST.root !==null,将插入一个节点进行比较，小于根节点拿到左边节点，大于根节拿到右边节点，再次比较，递归。
+        所以，最左边的节点是最小的数，最右边的节点是最大的数
+     */
+    function BST(){
+        this.root = null;// 初始化
+        this.insert = insert;
+    }
+    function insert(data) {
+        var node = new Node(data,null,null);
+        if(this.root === null){
+            this.root = node
+        }else {
+            var current = this.root;
+            var parent;
+            while(true){
+                parent = current;
+                if(data < current.data){
+                    current = current.left;
+                    if(current === null){
+                        parent.left = node;
+                        break;
+                    }
+                }else{
+                    current = current.right;
+                    if(current === null){
+                        parent.right = node;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    var bst = new BST();
+    bst.insert(23);
+    bst.insert(12);
+    bst.insert(3);
+    bst.insert(15);
+    bst.insert(67);
+    bst.insert(45);
+    bst.insert(13);
+    bst.insert(29);
+    console.log(bst);
+
+    /*
+    二叉树的遍历：
+        前序遍历：根左右
+        中序遍历：左根右
+        后序遍历：左右根
+     */
+    // 中序遍历：左根右
+    function inOrder(node) {
+        if(node !== null) {
+            //如果不是null，就一直查找左变，因此递归
+            inOrder(node.left);
+            //递归结束，打印当前值
+            console.log(node.show());
+            //上一次递归已经把左边搞完了，右边
+            inOrder(node.right);
+        }
+    }
+
+    //在刚才已有bst的基础上执行命令
+    inOrder(bst.root);
+    // 前序遍历：根左右
+    function preOrder(node) {
+        if(node !== null) {
+            //根左右
+            console.log(node.show());
+            preOrder(node.left);
+            preOrder(node.right);
+        }
+    }
+    // 后序遍历：左右根
+    function postOrder(node) {
+        if(node !== null) {
+            //左右根
+            postOrder(node.left);
+            postOrder(node.right);
+            console.log(node.show())
+        }
+    }
+    preOrder(bst.root);
+    postOrder(bst.root);
+
+
+    /*
+   最小值：最左子树的叶子节点
+   最大值：最右子树的叶子节点
+   特定值：target与current比较，比current大，就在current.right查找
+    */
+    //最小值
+    function getMin(bst) {
+        var current = bst.root;
+        while(current.left !== null) {
+            current = current.left;
+        }
+        return current.data;
+    }
+
+    //最大值
+    function getMax(bst) {
+        var current = bst.root;
+        while(current.right !== null) {
+            current = current.right;
+        }
+        return current.data;
+    }
+
+    function find(target,bst) {
+        var current = bst.root;
+        while(current !== null) {
+            if(target === current.data) {
+                return true;
+            }
+            else if(target > current.data) {
+                current = current.right;
+            } else if(target < current.data) {
+                current = current.left;
+            }
+        }
+        return -1;
+    }
+</script>
+</html>
+

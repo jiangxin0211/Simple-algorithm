@@ -13,7 +13,178 @@
         for循环；封装上的直接性
         while循环：简单的预测试循环
         do-while循环：后测试循环（循环体，条件体），至少运行一次
-        for-in循环：可以枚举任何对象的命名属性
+        for-in循环：可以枚举任何对象的命名属性 比其他三个循环明显要慢，因为每次迭代都会搜索实例或原型的属性
      */
+    //original loops
+    for (var i=0; i < items.length; i++){
+        process(items[i]);
+    }
+    var j=0;
+    while (j < items.length){
+        process(items[j++]);
+    }
+    var k=0;
+    do {
+        process(items[k++]);
+    } while (k < items.length);
+    /*
+    在每个循环中，每次运行循环体都会发生如下几个操作：
+        在控制条件中读取一次属性
+        在控制条件中执行一次比较
+        比较操作，查看条件控制体的运算结果是不是true
+        一次自增操作
+        一次数组查找
+        一次函数调用
+    减少迭代中的操作总数，process（）对每个项目的操作
+     */
+    //minimizing property lookups 只在循环之前对数组长度进行一次属性查询
+    for (var i=0, len=items.length; i < len; i++){
+        process(items[i]);
+    }
+    var j=0,
+        count = items.length;
+    while (j < count){
+        process(items[j++]);
+    }
+    var k=0,
+        num = items.length;
+    do {
+        process(items[k++]);
+    } while (k < num);
+
+    //minimizing property lookups and reversing 倒序循环可以略微提升循环速度 只进行一次比较：与0（可看作是false）比较，快了50%-60%
+    for (var i=items.length; i--; ){
+        process(items[i]);
+    }
+    var j = items.length;
+    while (j--){
+        process(items[j]);
+    }
+    var k = items.length-1;
+    do {
+        process(items[k]);
+    } while (k--);
+
+
+    //credit: Jeff Greenberg 达夫设备（循环体展开技术），第一次循环调用8次process函数，第二次循环调用了4次process函数，两次循环代替了12次循环
+    var iterations = Math.floor(items.length / 8),
+        startAt = items.length % 8,
+        i = 0;
+    do {
+        switch(startAt){
+            case 0: process(items[i++]);
+            case 7: process(items[i++]);
+            case 6: process(items[i++]);
+            case 5: process(items[i++]);
+            case 4: process(items[i++]);
+            case 3: process(items[i++]);
+            case 2: process(items[i++]);
+            case 1: process(items[i++]);
+        }
+        startAt = 0;
+    } while (--iterations);
+
+    //credit: Jeff Greenberg 将余数处理与主循环分开 速度更快
+    var i = items.length % 8;
+    while(i){
+        process(items[i--]);
+    }
+    i = Math.floor(items.length / 8);
+    while(i){
+        process(items[i--]);
+        process(items[i--]);
+        process(items[i--]);
+        process(items[i--]);
+        process(items[i--]);
+        process(items[i--]);
+        process(items[i--]);
+        process(items[i--]);
+    }
+    // forEach
+    items.forEach(function(value, index, array){
+        process(value);
+    });
+    /*
+    基于函数的迭代占用的时间是基于循环的迭代8倍
+     */
+    // 递归   缺少最终条件导致长时间运行，冻结用户界面，遇到浏览器调用栈大小的限制
+    function factorial(n){
+        if (n === 0){
+            return 1;
+        } else {
+            return n * factorial(n-1);
+        }
+    }
+    try {
+        recurse();
+    } catch (ex){
+        alert("Too much recursion!");
+    }
+    // 合并排序算法 递归
+    function merge(left, right){
+        var result = [];
+        while (left.length > 0 && right.length > 0){
+            if (left[0] < right[0]){
+                result.push(left.shift());
+            } else {
+                result.push(right.shift());
+            }
+        }
+        return result.concat(left).concat(right);
+    }
+    function mergeSort(items){
+        if (items.length === 1) {
+            return items;
+        }
+        var middle = Math.floor(items.length / 2),
+            left = items.slice(0, middle),
+            right = items.slice(middle);
+        return merge(mergeSort(left), mergeSort(right));// 2*n-1次
+    }
+
+
+    // 合并排序算法 迭代   迭代可能会比递归慢一些，但是不会影响调用栈，可以避免栈溢出错误
+    function mergeSort(items){
+        if (items.length == 1) {
+            return items;
+        }
+        var work = [];
+        for (var i=0, len=items.length; i < len; i++){
+            work.push([items[i]]);
+        }
+        work.push([]); //in case of odd number of items
+        for (var lim=len; lim > 1; lim = (lim+1)/2){
+            for (var j=0,k=0; k < lim; j++, k+=2){
+                work[j] = merge(work[k], work[k+1]);
+            }
+            work[j] = []; //in case of odd number of items
+        }
+        return work[0];
+    }
+    // 制表技术来重新写阶乘  建立一个缓存对象
+    function memfactorial(n){
+        if (!memfactorial.cache){
+            memfactorial.cache = {
+                "0": 1,
+                "1": 1
+            };
+        }
+        if (!memfactorial.cache.hasOwnProperty(n)){
+            memfactorial.cache[n] = n * memfactorial (n-1);
+        }
+        return memfactorial.cache[n];
+    }
+
+    // 封装一个memoize函数，传两个参数：一个制表函数，一个可选的缓存对象
+    function memoize(fundamental, cache){
+        cache = cache || {};
+        var shell = function(arg){
+            if (!cache.hasOwnProperty(arg)){
+                cache[arg] = fundamental(arg);
+            }
+            return cache[arg];
+        };
+        return shell;
+    }
 </script>
 </html>
