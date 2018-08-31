@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function howManyArgs(){
+        console.log(arguments.length)
+    }
+    howManyArgs("string", 45); // 2
+    howManyArgs(23); // 1
+    howManyArgs("string"); // 1
+    howManyArgs(); // 0
+
+
+
+    function addTen(num){
+        num += 10;
+        return num;
+    }
+    var count= 20;
+    var result = addTen(count);
+    console.log(count); // 20
+    console.log(result); // 30
+
+
+
+    function setName(obj){
+        obj.name = "nihaowa";
+    }
+    var person = new Object();
+    setName(person);
+    console.log(person.name); // nihaowa
+    console.log(obj.name); // not defined
+
+
+
+    // 对象是按值传递的
+    function setName(obj) {
+        obj.name = "nihaowa";
+        var obj = new Object();
+        obj.name = "haoyahaoya";
+    }
+    var person = new Object();
+    setName(person);
+    console.log(person.name); // nihaowa
+
+
+    var color = "blue";
+    function changeColor(){
+        var anotherColor = "red";
+        function swapColor(){
+            var tempColor = anotherColor;
+            anotherColor = color;
+            color = tempColor;
+            // 这里可以访问color，anotherColor,tempColor
+        }
+        // 这里可以访问color，anotherColor,不能访问tempColor
+        swapColor();
+    }
+    // 这里只能访问color
+    changeColor();
+</script>
+</html>
