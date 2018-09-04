@@ -8,6 +8,11 @@
 
 </body>
 <script>
+    axios.post('https://www.mydolby.cn:9443/api/test/corsopt',{},{
+        headers:{
+            "Content-Type":"application/json"
+        }
+    }).then(res=>console.log);// 没有发生预检请求
     /*
     axios在设置Content-Type:application/json头的时候，会首先发送一个OPTION请求，随后才会发送真正的POST请求
     HTTP Method
@@ -22,7 +27,50 @@
         如果POST操作在源服务器上创建了一个资源。那么服务器应该向客户端返回201（CREATED）。
         特点：非幂等性
         应用场景：表单提交，数据创建，更新。
-       
+      PUT：
+        创建或更新资源。创建返回201（CREATED），更新资源返回200或204。如果该资源无法被创建或修改。服务端需要向客户端响应合理的错误提示。
+        特点：幂等性。
+      PUT与POST的根本区别：
+        请求URL的意义。对于POST请求而言，发送的URL对应的服务器的处理过程，而不是资源实体；对于PUT而言，URL对应的就是需要创建或更新的资源，
+        服务器不可以直接将该请求信息应用到其他资源。如果需要更新其他资源，服务器必须完成以下操作：
+            服务端向客户端响应301，客户端可能在此决定是否取消请求或重定向到新的资源。
+        应用场景：创建或更新资源。
      */
+    /*
+    CORS：
+        概述：跨域资源共享标准新增了一些HTTP头部字段，允许服务器声明自己的资源访问权限。另外还指出：对于一些可能对服务器数据产生副作用的HTTP请求
+        （非GET请求，或者设置了某些MIME类型的POST请求），浏览器必须首先发起一个预检请求，从而获知服务器是否被允许跨域请求。服务器确认允许后，才发出真正的
+        HTTP请求。在预检请求的响应结果中，服务器也可以通知客户端，是否需要携带身份信息（cookie或者其他头部数据）
+     */
+
+    /*
+    不会触发CORS预检请求的资源请求，被称为简单请求，满足以下条件称为简单请求：
+        使用以下方法之一：
+            GET
+            HEAD
+            POST   Content-Type:当值为text/plain,multipart/formdata, application/x-wwww.urlencoded
+    满足以下条件的，会首先发送OPTIONS预检请求：
+        使用了下列任意方法：
+            PUT
+            DELETE
+            CONNECT
+            OPTIONS
+            TRACE
+            PATCH
+   设置了CORS首部字段集合之外的其他头部数据，该集合为：
+    Accept
+    Accept-Language
+    Content-Type:当值不为text/plain,multipart/formdata, application/x-wwww.urlencoded
+     */
+
+
+  // 回到起点，在快于请求express的服务时，设置了Content-Type为application/json后，按理说，应该是会发起预检请求。
+  // 可实际结果与理论发生了冲突。原因在于：预检请求需要在服务器中惊醒配置，在修改该路由的代码为以下内容后，浏览器正确的发起了OPTIONS请求。
+    const cors = require('cors');
+    router.options('api/test/corsopt',cors());
+    router.post('api/test/corsopt',cors(),(req,res)=>{
+        res.send('test');
+    })
+
 </script>
 </html>
