@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    axios在设置Content-Type:application/json头的时候，会首先发送一个OPTION请求，随后才会发送真正的POST请求
+    HTTP Method
+      OPTIONS:
+        创建或更新资源：在不需要向服务器发起实际资源请求的情况下，客户端可以确定服务器的容量，该资源请求的所需条件等内容。
+        特点：不可缓存，幂等性
+      HEAD：
+        HEAD方法与GET请求基本一致，区别在与HEAD方法响应结果中不可以包含数据体。需要注意的是，HEAD请求的响应头部信息必须与GET请求完全一致。
+        特点：幂等性。
+      POST：
+        如果POST操作引起的变更结果不能用一个URL来表示，那么服务器应该向客户端响应200（OK）或2024（NOT CONTENT）。
+        如果POST操作在源服务器上创建了一个资源。那么服务器应该向客户端返回201（CREATED）。
+        特点：非幂等性
+        应用场景：表单提交，数据创建，更新。
+       
+     */
+</script>
+</html>
