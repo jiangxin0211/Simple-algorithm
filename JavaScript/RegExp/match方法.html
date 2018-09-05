@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function matchReg(reg,str){
+        var result = str.match(reg);
+        if(result){
+            document.write('index:' + result.index + '<br/>' + 'input:' + result.input + '<br/>');
+            for(i = 0; i < result.length; i++){
+                document.write('result[' + i + ']:' + result[i] + '<br/>');
+            }
+        }else {
+            console.log('null:匹配失败');
+        }
+    }
+    var reg = /b/g;
+    var str = 'bbs.blueidea.com';
+    matchReg(reg,str);// 完成一次匹配之后没有停止，继续匹配
+    /*
+    index:undefined
+    input:undefined
+    result[0]:b
+    result[1]:b
+    result[2]:b
+     */
+
+
+</script>
+</html>

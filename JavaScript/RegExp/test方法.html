@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function testReg(reg,str){
+        console.log(reg.test(str));
+    }
+    var reg = /b/;
+    var str = 'bbs.blueidea.com';
+    testReg(reg,str);// true
+
+    var reg = /9/;
+    var str = 'bbs.blueidea.com';
+    testReg(reg,str);//false
+</script>
+</html>

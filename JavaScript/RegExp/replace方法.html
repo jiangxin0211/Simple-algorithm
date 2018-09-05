@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    replace方法：形式：str. replace (reg,’new str’);
+     */
+    // var reg = /b/;
+    // var str = 'bbs.blueidea.com';
+    // var newStr = str.replace(reg,'c');
+    // document.write(newStr);// cbs.blueidea.com
+
+    // var reg = /b/g;
+    // var str = 'bbs.blueidea.com';
+    // var newStr = str.replace(reg,'c');
+    // document.write(newStr);//ccs.clueidea.com
+
+    // var reg = /(\w)+/g;
+    // var str = 'bbs.blueidea.com';
+    // var newStr = str.replace(reg,'word');
+    // document.write(newStr);//word.word.word
+
+
+
+    // //在replace函数中使用$引用子正则表达式匹配内容
+    // var reg = /(\w+).(\w+).(\w+)/;
+    // var str = 'bbs.blueidea.com';
+    // var newStr = str.replace(reg,'$1.$1.$1');
+    // document.write(newStr);//bbs.bbs.bbs
+
+    // var reg = /(\w+)\s(\w+)/;
+    // var str = 'cainiao gaoshou';
+    // var newStr = str.replace(reg,'$2 $1');
+    // document.write(newStr);//gaoshou cainiao
+
+    // var reg = /(\w+)\s(\w+)/;
+    // var str = 'cainiao gaoshou';
+    // var newStr = str.replace(reg,'$$ $$');
+    // document.write(newStr); // $ $
+
+    
+
+
+</script>
+</html>
