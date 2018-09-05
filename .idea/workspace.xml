@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d88670df-03e8-40ef-9303-4c1181dee0ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/cors/CORS预检请求.html" beforeDir="false" afterPath="$PROJECT_DIR$/cors/CORS预检请求.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/RegExp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/high/exec方法.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,31 +19,31 @@
     <session id="-406618122">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="20" />
+          <entry key="html" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="20" />
+          <entry key="HTML" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="14502" />
+          <entry key="html" value="16103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="14502" />
+          <entry key="HTML" value="16103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -52,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScript/algorithms and flow control.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2130">
+            <state>
               <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
             </state>
           </provider>
@@ -70,26 +72,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/20180820/二叉树和二叉查找树/二叉树.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
+            <state relative-caret-position="653">
               <caret line="116" column="22" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JavaScript/high/test3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cors/CORS预检请求.html">
+        <entry file="file://$PROJECT_DIR$/JavaScript/high/exec方法.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="74" column="90" selection-start-line="74" selection-start-column="90" selection-end-line="74" selection-end-column="90" />
+            <state relative-caret-position="615">
+              <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -144,6 +137,8 @@
         <option value="$PROJECT_DIR$/JavaScript/design/test2.html" />
         <option value="$PROJECT_DIR$/JavaScript/design/test3.html" />
         <option value="$PROJECT_DIR$/cors/CORS预检请求.html" />
+        <option value="$PROJECT_DIR$/JavaScript/RegExp.html" />
+        <option value="$PROJECT_DIR$/JavaScript/high/exec方法.html" />
       </list>
     </option>
   </component>
@@ -163,7 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,16 +170,11 @@
               <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
-              <item name="high" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -221,18 +210,19 @@
       <workItem from="1535431818666" duration="32343000" />
       <workItem from="1535785695202" duration="10700000" />
       <workItem from="1536053012014" duration="1572000" />
-      <workItem from="1536060319041" duration="2599000" />
+      <workItem from="1536060319041" duration="2882000" />
+      <workItem from="1536137929339" duration="5105000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70579000" />
+    <option name="totallyTimeSpent" value="75967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19698173" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19698173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -243,7 +233,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32876712" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.269863" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -450,7 +440,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaScript/algorithms and flow control.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2130">
+        <state>
           <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
         </state>
       </provider>
@@ -462,10 +452,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20180820/二叉树和二叉查找树/二叉树.html">
+    <entry file="file://$PROJECT_DIR$/cors/CORS预检请求.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="116" column="22" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
+        <state relative-caret-position="506">
+          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -476,10 +466,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cors/CORS预检请求.html">
+    <entry file="file://$PROJECT_DIR$/JavaScript/RegExp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="74" column="90" selection-start-line="74" selection-start-column="90" selection-end-line="74" selection-end-column="90" />
+        <state relative-caret-position="563">
+          <caret line="149" column="14" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20180820/二叉树和二叉查找树/二叉树.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="116" column="22" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/high/exec方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
         </state>
       </provider>
     </entry>

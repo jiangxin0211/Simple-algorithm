@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function execReg(reg,str){
+        var result = reg.exec(str);
+        // console.log(typeof result); //object
+        document.write('index:' + result.index + '<br/>' + 'input:' + result.input + '<br/>>');
+        for(i = 0; i < result.length; i++){
+            document.write('result[' + i + ']:' + result[i] + '<br/>')
+        }
+    }
+    // var reg = /\w/;
+    // var str='bbs.bblueidea.com';
+    // execReg(reg,str);
+    /*
+    结果如下：
+        index:0
+        input:bbs.bblueidea.com
+        result[0]:b
+     */
+    //
+    // var reg = /(\w)(\w)(.+)/;
+    // var str='bbs.bblueidea.com';
+    // execReg(reg,str);
+
+    var reg = /b/g;
+    var str = 'bbs.blueidea.com';
+    execReg(reg,str);
+    execReg(reg,str);
+    /*
+    第二次匹配的是字符串的字符串的第二个b。这也就是g修饰符的作用了，下面来看exec是如何区别对待g和非g正则表达式的。
+    如果正则表达式没有设置g，那么exec方法不会对正则表达式有任何的影响，如果设置了g，那么exec执行之后会更新正则表达式的lastIndex属性，表
+    示本次匹配后，所匹配字符串的下一个字符的索引，下一次再用这个正则表达式匹配字符串的时候就会从上次的lastIndex属性开始匹配，也就是上面
+    两个例子结果不同的原因了。
+     */
+
+
+
+
+</script>
+</html>
