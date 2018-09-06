@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function isDigit(str){
+        var reg = /^\d*$/;// 判断是不是数字
+        return reg.test(str);
+    }
+    var str = "7654321";
+    document.write(isDigit(str));
+    var str = "test";
+    document.write(isDigit(str));
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    search返回正则表达式第一次匹配的位置
+     */
+    // var reg = /idea/;
+    // var str = 'blueidea';
+    // var pos = str.search(reg);
+    // document.write(pos);// 4
+
+    // var reg = /\W/;// 大写
+    // var str = 'bbs.blueidea.com';
+    // var pos = str.search(reg);
+    // document.write(pos);
+
+    // split返回分割后的数组
+    // var reg = /\W/;
+    // var str = 'bbs.blueidea.com';
+    // var arr = str.split(reg);
+    // str.split(reg,'seprator');
+    // document.write(arr);// bbs,blueidea,com
+
+    var reg = /\W/;
+    var str = 'http://www.baidu.com/';
+    var arr = str.split(reg);
+    document.write(arr.length, '<br/>');// 7
+    document.write(arr);// http,,,www,baidu,com,
+</script>
+</html>
