@@ -8,6 +8,240 @@
 
 </body>
 <script>
+    /*
+    第六章 面向对象的程序设计
+        数据属性：Configurable，Enumerable，Writable，Value
+                Object.defineProperty()修改默认属性
+        访问器属性：[[Get]]：在读取属性时调用的函数。默认值为undefined。
+                  [[Set]]：在写入属性时调用的函数。默认值为undefined
+                  访问器属性必须用Object.defineProperty()来定义
+     */
+    var book ={
+        _year: 2004,// 下划线表示只能通过对象方法访问的属性
+        edition: 1
+    };
+    Object.defineProperty(book, "year", {
+        get:function(){
+            return this._year;
+        },
+        set: function(newValue){
+            if(newValue > 2004) {
+                this._year = newValue;
+                this.edition += newValue - 2004;
+            }
+        }
+    });
+    book.year = 2005;
+    console.log(book.edition); // 2
+
+    var book = {
+        _year: 2004,
+        edition: 1
+    };
+    //定义访问器的旧有方法
+    book.__defineGetter__("year", function(){
+        return this._year;
+    });
+    book.__defineSetter__("year", function(newValue){
+        if (newValue > 2004) {
+            this._year = newValue;
+            this.edition += newValue - 2004;
+        }
+    });
+    book.year = 2005;
+    console.log(book.edition); //2
+
+    // 读取属性的特性：
+    //      Object.getOwnPropertyDescriptor()方法
+
+
+    // 工厂模式
+    // 工厂模式虽然解决了创建多个相似对象的问题，但却没有解决对象识别的问题（即怎样知道一个对象的类型）
+    // function createPerson(name, age, job){
+    //     var o = new Object();
+    //     o.name = name;
+    //     o.age = age;
+    //     o.job = job;
+    //     o.sayName = function(){
+    //         console.log(this.name);
+    //     };
+    //     return o;
+    // }
+    // var person1 = createPerson("Nicholas", 29, "Software Engineer");
+    // var person2 = createPerson("Greg", 27, "Doctor");
+    // person1.sayName();
+    // person2.sayName();
+
+
+
+    // 构造函数模式：创造特定类型的对象,可自定义对象
+    /*
+        Person()与createPerson()区别
+            没有显式地创建对象；
+            直接将属性和方法赋给了this对象；
+            没有return 语句。
+     */
+    // function Person(name, age, job){
+    //     this.name = name;
+    //     this.age = age;
+    //     this.job = job;
+    //     this.sayName = function(){
+    //         console.log(this.name);
+    //     };
+    //     // this.sayName = new Function("alert(this.name)"); // 与声明函数在逻辑上是等价的
+    // }
+    // var person1 = new Person("Nicholas", 29, "Software Engineer");
+    // var person2 = new Person("Greg", 27, "Doctor");
+    // person1.sayName();
+    // person2.sayName();
+    // console.log(person1 instanceof Object); //true
+    // console.log(person1 instanceof Person); //true
+    // console.log(person2 instanceof Object); //true
+    // console.log(person2 instanceof Person); //true
+    //
+    // // 当作构造函数使用
+    // var person = new Person("Nicholas", 29, "Software Engineer");
+    // person.sayName(); //"Nicholas"
+    // // 作为普通函数调用
+    // Person("Greg", 27, "Doctor"); // 添加到window
+    // window.sayName(); //"Greg"
+    // // 在另一个对象的作用域中调用
+    // var o = new Object();
+    // Person.call(o, "Kristen", 25, "Nurse");
+    // o.sayName(); //"Kristen"
+
+
+    // 原型模式：prototype（原型）属性，这个属性是一个指针，指向一个对象，而这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法
+    // 使用原型对象的好处是可以让所有对象实例共享它所包含的属性和方法。
+    // function Person(){
+    // }
+    // Person.prototype.name = "Nicholas";
+    // Person.prototype.age = 29;
+    // Person.prototype.job = "Software Engineer";
+    // Person.prototype.sayName = function(){
+    //     console.log(this.name);
+    // };
+    // var person1 = new Person();
+    // person1.sayName(); //"Nicholas"
+    // var person2 = new Person();
+    // person2.sayName(); //"Nicholas"
+    // console.log(person1.sayName == person2.sayName); //true
+    //
+    //
+    // // Person.prototype 指向了原型对象，而Person.prototype.constructor 又指回了Person
+    // console.log(Person.prototype.isPrototypeOf(person1)); //true 内部都有一个指向Person.prototype 的指针
+    // console.log(Person.prototype.isPrototypeOf(person2)); //true 内部都有一个指向Person.prototype 的指针
+    //
+    // console.log(Object.getPrototypeOf(person1) == Person.prototype); //true
+    // console.log(Object.getPrototypeOf(person1).name); //"Nicholas" Object.getPrototypeOf()方法返回Prototype的值
+
+
+
+
+
+
+    // function hasPrototypeProperty(object, name){
+    //     return !object.hasOwnProperty(name) && (name in object);
+    // }
+    // function Person(){
+    // }
+    // Person.prototype.name = "Nicholas";
+    // Person.prototype.age = 29;
+    // Person.prototype.job = "Software Engineer";
+    // Person.prototype.sayName = function(){
+    //     console.log(this.name);
+    // };
+    // var person = new Person();
+    // console.log(hasPrototypeProperty(person, "name")); //true
+    // person.name = "Greg";
+    // console.log(hasPrototypeProperty(person, "name")); //false
+
+
+
+    // var o = {
+    //     toString : function(){
+    //         return "My Object";
+    //     }
+    // };
+    // for (var prop in o){
+    //     if (prop == "toString"){
+    //         console.log("Found toString"); //在IE 中不会显示
+    //     }
+    // }
+    //
+    // function Person(){
+    // }
+    // Person.prototype.name = "Nicholas";
+    // Person.prototype.age = 29;
+    // Person.prototype.job = "Software Engineer";
+    // Person.prototype.sayName= function(){
+    //     console.log(this.name);
+    // };
+    // var keys = Object.keys(Person.prototype);
+    // console.log(keys);//"name,age,job,sayName"
+    // var p1 = new Person();
+    // p1.name = "Rob";
+    // p1.age = 31;
+    // var p1keys = Object.keys(p1);
+    // console.log(p1keys);//"name,age
+    // Object.getOwnPropertyNames()可以得到所有实例属性  包含了不可枚举的constructor 属性
+
+
+
+    // 更简单的原型语法
+    // function Person(){
+    // }
+    // Person.prototype = {
+    //     name : "Nicholas",
+    //     age : 29,
+    //     job: "Software Engineer",
+    //     sayName : function () {
+    //         console.log(this.name);
+    //     }
+    // };
+    // //constructor 属性不再指向Person  而是object
+    // var friend = new Person();
+    // console.log(friend instanceof Object); //true
+    // console.log(friend instanceof Person); //true
+    // console.log(friend.constructor == Person); //false
+    // console.log(friend.constructor == Object); //true
+    //
+    //
+    // // 修改原生对象的原型starWith()    Array.prototype找到sort() Object.prototype找到substring()
+    // String.prototype.startsWith = function (text) {
+    //     return this.indexOf(text) == 0;
+    // };
+    // var msg = "Hello world!";
+    // console.log(msg.startsWith("Hello")); //true
+
+
+
+    /*
+    组合使用构造函数模式和原型模式
+        实例属性都是在构造函数中定义的，而由所有实例共享的属性constructor和方法sayName()则是在原型中定义
+     */
+    function Person(name, age, job){
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.friends = ["Shelby", "Court"];2
+    }
+    Person.prototype = {
+        constructor : Person,
+        sayName : function(){
+            console.log(this.name);
+        }
+    }
+    var person1 = new Person("Nicholas", 29, "Software Engineer");
+    var person2 = new Person("Greg", 27, "Doctor");
+    person1.friends.push("Van");
+    console.log(person1.friends); //"Shelby,Count,Van"
+    console.log(person2.friends); //"Shelby,Count"
+    console.log(person1.friends === person2.friends); //false
+    console.log(person1.sayName === person2.sayName); //true
+
+
+
 
 </script>
 </html>
