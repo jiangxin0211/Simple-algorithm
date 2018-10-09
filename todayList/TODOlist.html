@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{  margin: 0;  padding: 0;  }
+        .box {  margin: 30px auto;  width: 400px;  }
+        #doSth {  width: 100%;  height: 30px;  text-indent: 1em;  }
+        #list {  list-style: none;  font-size: 14px;  }
+        #list li {  text-indent:14px;  background: #ccc;  line-height: 30px;  border: 1px solid #666;  border-top: none;  }
+        #list li span {  float: right;  font-size: 20px;  cursor: pointer;  }
+    </style>
+</head>
+<body>
+<h1>TODO List</h1>
+<div class="box">
+    <input id="doSth" type="text" placeholder="to do something">
+    <ul id="list"></ul>
+</div>
+</body>
+<script>
+    /*
+    设计一个TODO List，页面结构如下图所示，要求：
+
+使用HTML与CSS完成界面开发
+
+实现添加功能：输入框中可输入任意字符，按回车后将输入字符串添加到下方列表的最后，并清空输入框
+
+实现删除功能：点击列表项后面的“X”号，可以删除该项
+
+实现模糊匹配：在输入框中输入字符后，将当前输入字符串与已添加的列表项进行模糊匹配，将匹配到的结果显示在输入框下方。如匹配不到任何列表项，列表显示空
+
+注：以上代码实现需要能在浏览器中正常显示与执行。
+     */
+
+    window.onload = function(){
+        var oUl = document.querySelector('#list');
+        var doSth = document.querySelector('#doSth');
+        doSth.onkeydown = function(e){
+            if(e.keyCode == 13){
+                var val = doSth.value;
+                if(val){
+                    var oLi = document.createElement('li');
+                    oLi.innerHTML = val+'<span>×</span>';
+                    oUl.append(oLi)  doSth.value = '';  }  }   }
+        oUl.onclick = function(e){
+            //console.log(e.target)
+            oUl.removeChild(e.target.parentNode);  }
+        doSth.onkeyup = function(e){
+            var lis = document.querySelectorAll('#list li');
+            if(lis){  for(var i=0;i<lis.length;i++){
+                var liText = lis[i].innerText;
+                var  val = doSth.value;
+                for(var j=0;j<val.length;j++){
+                    if(liText.indexOf(val[j])!==-1){
+                        oUl.prepend(lis[i]);
+                        lis[i].style.backgroundColor = '#fff';
+                    }
+                }
+            }
+            }
+            if(e.keyCode == 13){
+                for(var i=0;i<lis.length;i++){
+                    lis[i].style.backgroundColor = '#ccc'
+                }
+            }
+        }
+    }
+
+</script>
+</html>

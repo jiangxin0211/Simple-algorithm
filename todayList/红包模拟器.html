@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .container{
+            width: 300px;
+            height: 450px;
+            position: absolute;
+            top:50%;
+            margin-top:-225px;
+            left: 50%;
+            margin-left: -150px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .start{
+            width: 300px;
+            height: 450px;
+            margin: auto;
+            padding: 10px;
+        }
+        .start h1{
+            text-align: center;
+            margin: 20px 0;
+        }
+        label{
+            width: 80px;
+            display: block;
+        }
+        .box{
+            display: flex;
+            margin: 10px;
+        }
+        .button{
+            margin: 30px;
+            text-align: center;
+        }
+        .btn{
+            background: #07A8CA;
+            color: #fff;
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            border: none;
+        }
+        /*红包*/
+        .money{
+            width: 300px;
+            height: 450px;
+            border-radius: 10px;
+            display: none;
+            margin: 0 auto;
+            position: relative;
+            background: #A8413C;
+        }
+        .top{
+            height: 320px;
+            border-radius: 10px 10px 15% 15%;
+            border: 1px solid #BD503A;
+            background-color: #BD503A;
+            transition: all 0.5s;
+            z-index: -1;
+        }
+        .touxiang{
+            position: absolute;
+            top:10%;
+            width: 100%;
+            left: 0;
+            z-index: 99;
+            text-align: center;
+            color: #fff;
+        }
+        .touxiang img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+        .open{
+            border-radius: 50%;
+            background: #FAC550;
+            color: #fff;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 280px;
+            left: 50%;
+            margin-left: -50px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .list{
+            border-radius: 5px;
+            background: #AE493B;
+            color: #fff;
+            width: 250px;
+            position: absolute;
+            top: 240px;
+            left: 50%;
+            margin-left: -125px;
+            text-align: center;
+        }
+        .list li{
+            margin: 0px!important;
+            list-style-type: none;
+            padding: 0;
+        }
+        @keyframes roa{
+            from{ transform: rotateY(0deg)}
+            to{transform: rotateY(360deg)}
+        }
+        .rotate{
+            animation: roa 0.5s;
+        }
+        .slide{
+            transform: translateY(-200px);
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="start">
+        <h1>红包模拟器</h1>
+        <div class="box">
+            <label for="num">红包个数</label>
+            <input type="text" id="num"><span>个</span>
+        </div>
+        <div class="box">
+            <label for="sum">总金额</label>
+            <input type="text" id="sum"><span>元</span>
+        </div>
+        <div class="button">
+            <button class="btn">发红包</button>
+        </div>
+    </div>
+    <div class="money">
+        <div class="touxiang">
+            <img src="http://s3a.pstatp.com/cg_growth/resource/boilerplate/images/redpacket/avatar.png">
+            <h2 id="nameAndMoney">Month</h2>
+            <p id="paihang">给您发了一个红包</p>
+            <p id="words">恭喜发财 大吉大利</p>
+        </div>
+        <div class="open">
+            拆红包
+        </div>
+        <div class="top">
+
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    /*
+    设计需求
+
+1. 页面上支持自定义红包输入的个数和金额，数值类型不能为空且必须大于1，效果如图一所示
+
+2. 点击发送红包按钮，可以进入红包生成的loading页面，效果如图二所示，模态框的宽高为300*450px，垂直居中页面，包含必要的头像和文案，拆红包按钮可以围绕中轴线做旋转动画
+
+3. 点击拆红包按钮后，会有一个向上的开红包的动画，根据前面输入的个数和金额生成红包获取列表，红包生成规则见附注。
+
+4. 金额最高的作为“手气最佳”进行标注，见图三中的领取榜单所示
+
+5. 从生成的红包列表中随机取出一个值作为你抢到的红包值，见图三中头像下的数字所示
+
+6. 点击右上角的关闭按钮，可以关闭弹框，同时清空领取榜单里的记录，方便下次重新生成
+
+红包生成规则
+
+1. 红包的数值是随机的，并且数值的分布近似于正态分布。
+
+2. 所有人都能分到红包，不会出现红包数值为0的情况，额度在0.01和(剩余平均值*2)之间。
+
+3. 所有人的红包数值加起来等于支付的金额
+
+4. 整体效果参考动态图，可以根据自身能力的情况侧重完成所擅长的环节(css页面，js交互，生成逻辑等)
+     */
+
+    var send=document.getElementsByClassName('btn')[0];
+    var startPage=document.getElementsByClassName('start')[0];
+    var red=document.getElementsByClassName('money')[0];
+    var num=0,
+        sum=0;
+    send.onclick=function(){
+        num=document.getElementById('num').value;
+        sum=document.getElementById('sum').value;
+        startPage.style.display="none";
+        red.style.display="block";
+    }
+    var open=document.getElementsByClassName('open')[0];
+    open.onclick=function(){
+        this.setAttribute("class","rotate open");
+        setTimeout(function(){
+            document.getElementsByClassName('top')[0].setAttribute("class","top slide");
+        },500);
+        setTimeout(function(){
+            document.getElementById('nameAndMoney').innerHTML=sum;
+            document.getElementById('paihang').innerHTML="红包领取榜";
+            document.getElementById('words').style.display="none";
+            var ul=document.createElement('ul');
+            ul.setAttribute("class","list");
+            document.getElementsByClassName('open')[0].style.display="none";
+            var money=sum/num;
+            var lis=[];
+            for(var i=0;i<num;i++){
+                var li=document.createElement('li');
+                var x=i+1;
+                li.innerHTML="用户"+x+": "+money+"";
+                ul.appendChild(li);
+            }
+            document.getElementsByClassName('money')[0].appendChild(ul);
+        },1000);
+    }
+</script>
+</html>

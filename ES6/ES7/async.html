@@ -27,9 +27,9 @@
     async function testasync(){
         return Promise.resolve('hello');
     }
-    async function test(){
+    async function test.html(){
         const v1 = await getSomething();
-        const v2 = await test();
+        const v2 = await test.html();
         console.log(v1);
         console.log(v2);
     }

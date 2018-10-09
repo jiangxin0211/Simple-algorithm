@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+    以下函数用于将一颗二叉搜索树转换成一个有序的双向链表。要求不能创建任何新的节点，只能调整树种节点指针的指向。
+
+如输入下图中左边的二叉搜索树，则输出转换后的排序双向链表：
+
+      10
+
+    /      \
+
+   6      14
+
+  /  \      /  \
+
+4   8  12  16
+
+转换成：
+
+ 4 <=> 6 <=> 8 <=> 10 <=> 12  <=> 14 <=> 16
+
+
+
+请指出程序代码中错误的地方（问题不止一处，请尽量找出所有你认为错误的地方）：
+
+  #include <stack>
+  using namespace std;
+
+  struct TreeNode {
+        int val;
+        TreeNode *left, *right;
+  };
+
+  TreeNode* Convert(TreeNode* root){
+         if (root == NULL)
+             return root;
+
+         TreeNode* listHead = NULL;
+         TreeNode* listLastNode = NULL;
+         stack<TreeNode*> s;
+         while(root){
+             while(root){
+                 root=root->left;
+                 s.push(root);
+             }
+             root=s.top();
+             s.pop();
+             if (listHead == NULL){
+                 listHead = root;
+             }else{
+                 listLastNode->right = root;
+             }
+             listLastNode = root
+             root= root->right;
+        }
+         return listHead;
+}
+     */
+
+    // http://blog.csdn.net/l_tudou/article/details/51753921
+</script>
+</html>
