@@ -28,7 +28,7 @@
     rl.on('line', function (line) {
         var lineArray = line.trim().split(' ');
         //输入的是第一行
-        if (0 == lineCount) {
+        if (0 === lineCount) {
             n = parseInt(lineArray[0]);
             m = parseInt(lineArray[1]);
             c = parseInt(lineArray[2]);
@@ -50,7 +50,7 @@
             //判断有几个珠子的颜色不合格
             for (onecolor of colorball.values()) {
                 for (let [index, v] of onecolor.entries()) {
-                    if (index == onecolor.length - 1) {//最后一颗
+                    if (index === onecolor.length - 1) {//最后一颗
                         if (n - v + onecolor[0] < m) { unlegalCount++; break; }
                         continue;
                     }
