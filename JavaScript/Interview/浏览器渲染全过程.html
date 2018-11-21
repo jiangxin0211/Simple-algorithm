@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    /*
+    从输入URL到页面发生的全过程：
+        1.首先浏览器主进程接管，开了一个下载线程
+        2.然后进行HTTP请求（DNS查询，IP寻址等），中间会有三次握手，等待响应，开始下载响应报文。
+        3.将下载完的内容，交给renderer进程管理。
+        4.Renderer进程开始解析css rule tree和dom tree，这两个过程是并行的，所以一般把link标签放在页面顶部
+        5.解析绘制过程中，遇到link标签，script标签，img等标签，浏览器会去下载这些内容，遇到缓存的时候缓存，不适用缓存的重新下载资源
+        6.css rule tree 和dom tree 生成完了之后，开始合成render tree，这时候浏览器会开始layout，开始计算每一个节点的位置，然后进行绘制
+        7.绘制结束后，关闭TCP连接，过程有四次挥手
+     */
+
+    // TCP 握手挥手https://blog.csdn.net/qzcsu/article/details/72861891
+
+    /*
+    UDP：传送数据前不需要建立连接，远程主机收到UDP报文后也不需要确认
+        交付不可靠，因而省去开销速度快。
+        对应的应用层的协议主要有 DNS53,TFTP69,DHCP,SNMP,NFS 等
+    TCP：面向连接的服务 可靠运输服务  增加了许多开销：确认，流量控制
+        对应的应用层的协议主要有 SMTP25,TELNET23,HTTP80,FTP20/21 等
+
+
+
+        物理层、数据链路层、网络层、传输层和应用层
+
+        TCP/IP将计算机网络分成了四个层次，分别是网络接口层（又称链路层）、网络层、传输层、应用层
+
+        OSI参考模型是七层：物理层，数据链路层，网络层，传输层，会话层，表示层，应用层
+
+     */
+
+
+    /*
+    CSS和JS的位置会影响页面的效率：
+        css在加载过程中不会影响到DOM树的生成，但是会影响到Render树的生成，进而影响到layout，所以一般来说，
+        style的link标签需要尽量放在head里面，因为在解析DOM树的时候是自上而下的，而css样式又是通过异步加载的，
+        这样的话，解析DOM树下的body节点和加载css样式能尽可能的并行，加快Render树的生成的速度。
+
+        js脚本应该放在底部，原因在于js线程与GUI渲染线程是互斥的关系，如果js放在首部，当下载执行js的时候，会影响渲染行程绘制页面，
+        js的作用主要是处理交互，而交互必须得先让页面呈现才能进行，所以为了保证用户体验，尽量让页面先绘制出来。
+     */
+
+
+    //  函数B集成函数A
+    //  方式1  无法实现多继承，父类的原型属性和原型方法，子类都能访问到
+    function B() {}
+    function A() {}
+    B.prototype = new A()
+
+    // 方式2  可以实现多继承，但是只能继承父类的实例属性和方法，不能继承父类的原型的属性和方法
+    function A(){}
+    function B () {
+        A.call(this)
+    }
+
+    // 方式3  父类实例和原型的属性和方法都可以继承，但是示例了两个A的构造函数
+    function B(){}
+    function A(){}
+    B.prototype = new A()
+
+    function B(){
+        A.call(this)
+    }
+
+
+    //  浏览器的缓存机制
+
+    /*
+    什么是XSS攻击？
+        Cross-site scripting跨站脚本攻击，代码注入攻击
+
+        攻击者通过在目标网站上注入恶意脚本，使之在用户的浏览器上运行。利用这些恶意脚本，
+        攻击者可获取用户的敏感信息如 Cookie、SessionID 等，进而危害数据安全。
+
+        XSS的本质是：恶意代码未经过滤，与网站正常的代码混在一起；浏览器无法分辨哪些脚本是可信的，导致恶意脚本被执行
+
+        XSS 攻击可分为存储型、反射型和 DOM 型三种。
+
+        XSS攻击主要是：攻击者提交恶意代码，浏览器执行恶意代码。
+
+
+     */
+
+    /*
+    解决： 1. 通过HTML转义，可以防止XSS攻击
+          2. 对于链接跳转，如<a href="xxx"或location.href="xxx"，要检验其内容，禁止以JavaScript：开头的链接，和其他非法的scheme
+          3. 对内联的JSON进行转义
+
+
+          防止 HTML 中出现注入。
+          防止 JavaScript 执行时，执行恶意代码。
+          改成纯前端渲染，把代码和数据分隔开。
+          对 HTML 做充分转义。
+          在使用 .innerHTML、.outerHTML、document.write() 时要特别小心，
+          不要把不可信的数据作为 HTML 插到页面上，而应尽量使用 .textContent、.setAttribute() 等。
+          如果用 Vue/React 技术栈，并且不使用 v-html/dangerouslySetInnerHTML 功能，
+          就在前端 render 阶段避免 innerHTML、outerHTML 的 XSS 隐患。
+          DOM 中的内联事件监听器，如 location、onclick、onerror、onload、onmouseover 等，
+          <a> 标签的 href 属性，JavaScript 的 eval()、setTimeout()、setInterval() 等，
+          都能把字符串作为代码运行。如果不可信的数据拼接到字符串中传递给这些 API，很容易产生安全隐患，请务必避免
+
+     */
+</script>
+</body>
+</html>

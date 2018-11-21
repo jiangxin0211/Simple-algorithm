@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*1*/
+        .wrapper {
+            position: relative;
+            .box {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100px;
+                height: 100px;
+                margin: -50px 0 0 -50px;
+            }
+        }
+        /*2*/
+        .wrapper {
+            position: relative;
+            .box {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        /*3*/
+        .wrapper {
+            .box {
+                display: flex;
+                height: 100px;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        /*4*/
+        .wrapper {
+            display: table;
+            .box {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box"></div>
+</div>
+
+<input id="input" type="text">
+
+<script>
+    // 实现一个函数判断是不是回文字符串（正着读和反着读都一样的字符串，例如level,noon）
+    function run(input) {
+        if (typeof input !== 'string') {
+            return false
+        }
+        return input.split('').reverse().join('') === input // 把一个字符串分割成字符串数组；颠倒数组中的元素顺序；把数组中的所有元素放入一个字符串（用指定分隔符分割）
+    }
+
+    // 实现效果 点击图标边框变红，点击空白区域，重置
+    const box = document.getElementById('box');
+    function isIcon(target) {
+        return target.className.includes('icon');
+    }
+
+    box.onClick = function(e) {
+        e.stopPropagation();
+        const target = e.target;
+        if (isIcon(target)) {
+            target.style.border = '1px solid red';
+        }
+    }
+    const doc = document;
+    doc.onclick = function(e) {
+        const children = box.children;
+        for(let i; i < children.length; i++) {
+            if (isIcon(children[i])) {
+                children[i].style.border = 'none';
+            }
+        }
+    }
+
+
+    //  简单实现双向数据绑定  mvvm
+    const data = {}
+    const input = document.getElementById('input');
+    Object.defineProperty(data, 'text', {
+        set(value){
+            input.value = value;
+            this.value = value;
+        }
+    })
+
+    input.onChange = function (e) {
+        data.text = e.target.value
+    }
+
+    //  实现Storage，使得该对象为单例，并对localStorage进行封装设置值setItem(key,value)和getItem(key)
+    var instance = null;
+    class Storage {
+        static getIntance () {
+            if (!instance) {
+                instance = new Storage();
+            }
+            return instance
+        }
+        setItem = (key, value) => localStorage.setItem(key, value)
+        getItem = key => localStorage.getItem(key)
+    }
+
+    // !! 强制转换类型,转换成boolean型
+    const b = 0;
+    console.log(!!b);// false
+
+
+    //  尽量不要在 componentWillReviceProps 里使用 setState，如果一定要使用，那么需要判断结束条件，不然会出现无限重渲染，导致页面崩溃。
+
+    /*
+    事件流：分两种，
+        捕获事件流：从根节点开始执行，向子节点查找执行，直到找到目标节点
+        冒泡时间流：从子节点开始执行，向根节点查找执行，直到找到目标节点
+    事件流分三个阶段： 捕获节点，处于目标节点阶段， 冒泡阶段
+
+     */
+
+
+
+    // Q:我现在有一个进度条，进度条中间有一串文字，当我的进度条覆盖了文字之后，文字要与进度条反色，怎么实现？
+        // css方法： mix-blend-mode
+        //  设置两个相同位置但是颜色相反的dom结构在重叠在一起，顶层覆盖底层，最顶层的进度条取overflow为hidden，其宽度就为进度
+
+
+
+    //  Q:你说一下webpack的一些plugin，怎么使用webpack对项目进行优化。
+        /*
+        构建优化：
+            1、减少编译体积 ContextReplacementPugin、IgnorePlugin、babel-plugin-import、babel-plugin-transform-runtime。
+            2、并行编译 happypack、thread-loader、uglifyjsWebpackPlugin开启并行
+            3、缓存 cache-loader、hard-source-webpack-plugin、uglifyjsWebpackPlugin开启缓存、babel-loader开启缓存
+            4、预编译 dllWebpackPlugin && DllReferencePlugin、auto-dll-webapck-plugin
+
+        性能优化：
+            1、减少编译体积 Tree-shaking、Scope Hositing。
+            2、hash缓存 webpack-md5-plugin
+            3、拆包 splitChunksPlugin、import()、require.ensure
+         */
+
+
+    //  Q:es6 class 的new实例和es5的new实例有什么区别
+
+
+    // Q:为什么canvas的图片为什么过有跨域问题。
+
+
+</script>
+</body>
+</html>
