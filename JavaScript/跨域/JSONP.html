@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSONP</title>
+</head>
+<body>
+<script>
+
+    /*
+    JSONP包含两个部分：回调函数：当响应到来时，放在当前页面被调用的函数
+                     数据：传回回调函数中的json数据，也就是回调函数的参数
+     */
+
+    function handleResponse (response) {
+        console.log('the response data is' + response.data);
+    }
+    var script = document.createElement('script');
+    script.src = 'http://www.baidu.com/json/?callback=handleResponse';
+    document.body.insertBefore(script, document.body.firstChild);
+    /*
+    原理如下：
+        当我们通过script标签请求时，后台会根据响应的参数（json,handleResponse）来生成响应的json数据（handleResponse({"data":"zhe"})）
+        最后返回的这个json数据就会被放在当前的js文件中被执行，至此跨域通信完成
+    缺点：1.安全问题（请求代码中可能存在安全隐患）
+         2.要确定jsonp的请求是否失败并不容易
+     */
+</script>
+</body>
+</html>

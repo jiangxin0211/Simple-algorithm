@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window.name</title>
+</head>
+<body>
+
+<script>
+    /*
+    window.name 的美妙之处：name 值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）
+     */
+
+    // 1) 创建a.com/cs1.html
+    function proxy(url, func){
+        var isFirst = true,
+            ifr = document.createElement('iframe'),
+            loadFunc = function(){
+                if(isFirst){
+                    ifr.contentWindow.location = 'http://a.com/cs1.html';
+                    isFirst = false;
+                }else{
+                    func(ifr.contentWindow.name);
+                    ifr.contentWindow.close();
+                    document.body.removeChild(ifr);
+                    ifr.src = '';
+                    ifr = null;
+                }
+            };
+
+        ifr.src = url;
+        ifr.style.display = 'none';
+        if(ifr.attachEvent) ifr.attachEvent('onload', loadFunc);
+        else ifr.onload = loadFunc;
+
+        document.body.appendChild(iframe);
+    }
+    // 2) 创建a.com/proxy.html，并加入如下代码
+    proxy('http://www.baidu.com/', function(data){
+        console.log(data);
+    });
+
+    // 3 在b.com/cs1.html中包含
+    window.name = '要传送的内容';
+
+</script>
+</body>
+</html>

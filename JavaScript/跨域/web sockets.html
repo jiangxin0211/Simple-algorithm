@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>web sockets</title>
+</head>
+<body>
+<script>
+    /*
+    web sockets是一种浏览器的API，目标是在一个持久的链接上提供全双工，双向通信。（同源策略对web sockets不适用）
+    web sockets原理：JS创建了web sockets后，会有一个HTTP请求发送到浏览器以发起连接；
+                    取得服务器响应后，建立的连接会使用HTTP升级从HTTP协议交换为web socket协议
+     */
+
+    // 只有在支持web socket 的服务器上才能正常工作
+    var socket = new WebSocket('http://www.baidu.com')
+    socket.send('hello webSocket')
+    socket.onmessage = function (event) {
+        var data = event.data;
+    }
+</script>
+</body>
+</html>

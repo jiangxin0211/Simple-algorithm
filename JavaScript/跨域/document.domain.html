@@ -5,36 +5,66 @@
     <title>document.domain</title>
 </head>
 <body>
-<script>
+<script type="text/javascript">
     /*
     什么是跨域？
         协议，端口，域名有一个不同都被当做不同的域
 
-            URL                      说明       是否允许通信
-    http://www.a.com/a.js
-    http://www.a.com/b.js     同一域名下   允许
+                URL                      说明       是否允许通信
+        http://www.a.com/a.js
+        http://www.a.com/b.js           同一域名下       允许
 
-    http://www.a.com/lab/a.js
-    http://www.a.com/script/b.js 同一域名下不同文件夹 允许
+        http://www.a.com/lab/a.js
+        http://www.a.com/script/b.js  同一域名下不同文件夹  允许
 
-    http://www.a.com:8000/a.js
-    http://www.a.com/b.js     同一域名，不同端口  不允许
+        http://www.a.com:8000/a.js
+        http://www.a.com/b.js        同一域名，不同端口    不允许
 
-    http://www.a.com/a.js
-    https://www.a.com/b.js 同一域名，不同协议 不允许
+        http://www.a.com/a.js
+        https://www.a.com/b.js          同一域名，不同协议 不允许
 
-    http://www.a.com/a.js
-    http://70.32.92.74/b.js 域名和域名对应ip 不允许
+        http://www.a.com/a.js
+        http://70.32.92.74/b.js         域名和域名对应ip 不允许
 
-    http://www.a.com/a.js
-    http://script.a.com/b.js 主域相同，子域不同 不允许（cookie这种情况下也不允许访问）
+        http://www.a.com/a.js
+        http://script.a.com/b.js        主域相同，子域不同 不允许（cookie这种情况下也不允许访问）
 
-    http://www.a.com/a.js
-    http://a.com/b.js 同一域名，不同二级域名（同上） 不允许（cookie这种情况下也不允许访问）
+        http://www.a.com/a.js
+        http://a.com/b.js       同一域名，不同二级域名（同上） 不允许（cookie这种情况下也不允许访问）
 
-    http://www.cnblogs.com/a.js
-    http://www.a.com/b.js 不同域名 不允许
+        http://www.cnblogs.com/a.js
+        http://www.a.com/b.js               不同域名      不允许
+
+        协议和端口造成的跨域问题，前台是解决不了的
+        在跨域问题上，域仅仅通过"URL首部"来识别，而不会判断相同IP地址上对应的两个域或者两个域是否在同一IP上
+
+       浏览器的同源策略：不能通过AJAX方法访问不同源中的文档
+                      浏览器中不同域的框架之间不能进行js交互操作
+                      不同的框架之间是可以获取window对象的，但是不可获取对象的属性和方法
      */
+    // 在www.a.com/a.html中
+    document.domain = 'a.com';
+    var ifr = document.createElement('iframe');
+    ifr.src = 'http://www.script.a.com/b.html';
+    ifr.display = none;
+    document.body.appendChild(ifr);
+    ifr.onload = function(){
+        var doc = ifr.contentDocument || ifr.contentWindow.document;
+        //在这里操作doc，也就是b.html
+        ifr.onload = null;
+    };
+
+    // 在www.script.a.com/b.html中：
+    document.domain = 'a.com';
+
+
+    // document.domain是有限制的：只能把document.domain设置成自身或者更高一级的父域，且主域必须相同
+    document.domain = 'damonare.cn'//设置成主域
+
+
+    // 修改document.domain只适用于不同子域的框架间的交互
+
+
 </script>
 </body>
 </html>

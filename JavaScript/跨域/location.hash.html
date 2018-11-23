@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>location.hash</title>
+</head>
+<body>
+<script>
+
+    /*
+    父窗口可以对iframe进行URL读写；iframe也可以对父窗口的URL进行读写
+    URL中#后面的被称为hash，用于浏览器锚点定位
+    HTTP请求过程中不会携带hash，所以修改hash不会产生HTTP请求，但会产生浏览器历史记录
+    改变URL中的hash来进行双向通信：
+        window通过改变其他window.location来发送消息，并通过监听自己URL的变化来接收消息
+        缺点： 造成不必要的浏览历史记录
+              有些浏览器不支持onchangehash事件，需要轮询来获知URL的改变
+              数据直接暴露在了URL中，数据容量和类型都有限
+     */
+
+    /*
+    原理是利用location.hash来进行传值。
+
+        假设域名a.com下的文件cs1.html要和cnblogs.com域名下的cs2.html传递信息。
+        1) cs1.html首先创建自动创建一个隐藏的iframe，iframe的src指向cnblogs.com域名下的cs2.html页面
+        2) cs2.html响应请求后再将通过修改cs1.html的hash值来传递数据
+        3) 同时在cs1.html上加一个定时器，隔一段时间来判断location.hash的值有没有变化，一旦有变化则获取获取hash值
+        注：由于两个页面不在同一个域下IE、Chrome不允许修改parent.location.hash的值，所以要借助于a.com域名下的一个代理iframe
+     */
+
+    // a.com下的文件cs1.html文件
+    function startRequest(){
+        var ifr = document.createElement('iframe');
+        ifr.style.display = 'none';
+        ifr.src = 'http://www.cnblogs.com/lab/cscript/cs2.html#paramdo';
+        document.body.appendChild(ifr);
+    }
+
+    function checkHash() {
+        try {
+            var data = location.hash ? location.hash.substring(1) : '';
+            if (console.log) {
+                console.log('Now the data is '+data);
+            }
+        } catch(e) {};
+    }
+    setInterval(checkHash, 2000);
+
+
+    // cnblogs.com域名下的cs2.html
+    //模拟一个简单的参数处理操作
+    switch(location.hash){
+        case '#paramdo':
+            callBack();
+            break;
+        case '#paramset':
+            //do something……
+            break;
+    }
+
+    function callBack(){
+        try {
+            parent.location.hash = 'somedata';
+        } catch (e) {
+            // ie、chrome的安全机制无法修改parent.location.hash，
+            // 所以要利用一个中间的cnblogs域下的代理iframe
+            var ifrproxy = document.createElement('iframe');
+            ifrproxy.style.display = 'none';
+            ifrproxy.src = 'http://a.com/test/cscript/cs3.html#somedata';    // 注意该文件在"a.com"域下
+            document.body.appendChild(ifrproxy);
+        }
+    }
+
+    //a.com下的域名cs3.html
+    //因为parent.parent和自身属于同一个域，所以可以改变其location.hash的值
+    parent.parent.location.hash = self.location.hash.substring(1);
+
+</script>
+</body>
+</html>

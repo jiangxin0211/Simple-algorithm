@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS</title>
+</head>
+<body>
+<script>
+
+    /*
+    CORS的思想：使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或响应应该成功还是失败
+     */
+
+    // IE中对CORS的实现是xdr
+    var xdr = new XDomainRequest();
+    xdr.onload = function () {
+        console.log(xdr.responseText)
+    }
+    xdr.open('get', 'http://wwww.baidu.com')
+    // ……
+    xdr.send(null);
+
+
+    // 其他浏览器的实现在xhr中
+    var  xhr = new XMLHttpRequest()();
+    xhr.onreadystatechange= function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 304 || xhr.status === 304) {
+                console.log(xhr.responseText)
+            }
+        }
+    }
+    xhr.open('get', 'http://www.baodu.com');
+    // ……
+    xhr.send(null);
+
+
+    // 实现跨浏览器的CORS
+    function createCORS (method, url) {
+        var xhr = new XMLHttpRequest();
+        if ('withCredentials' in xhr) {
+            xhr.open(method, url, true);
+        } else if (typeof XDomainRequest != 'undefined') {
+            var xhr = new XDomainRequest();
+            xhr.open(method, url);
+        } else {
+            xhr = null;
+        }
+        return xhr;
+    }
+
+    var request = createCORS('get', 'http://www.baidu.com');
+    if (request) {
+        request.onload = function () {
+          // ……
+        };
+        request.send();
+    }
+</script>
+</body>
+</html>

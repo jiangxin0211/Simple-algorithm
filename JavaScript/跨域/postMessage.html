@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>postMessage</title>
+</head>
+<body>
+<iframe id="ifr" src="b.com/index.html"></iframe>
+<script>
+    /*
+    HTML5中XMLHttpRequest Level 2中API
+     */
+    // 1) a.com/index.html中的代码
+    window.onload = function () {
+        var ifr = document.getElementById('ifr');
+        var targetOrigin = 'http://b.com';
+        ifr.contentWindow.postMessage('jiangxin', targetOrigin);// targetOrigin是限定消息接收范围，不限制请使用 '*
+    }
+
+    // 2) b.com/index.html中的代码：
+    window.addEventListener('message', function (event) {
+        // 通过origin属性来判断消息来源地址
+        if (event.origin === 'http://a.com') {
+            alert(event.data) // 弹出jiangxin
+            alert(event.source) // 对a.com、index.html中window对象的引用,但由于同源策略，这里event.source不可以访问window对象
+        }
+    }, false);
+
+
+    var onmessage = function (event) {
+        var data = event.data;//消息
+        var origin = event.origin;//消息来源地址
+        var source = event.source;//源Window对象
+        if(origin === "http://www.baidu.com"){
+            console.log(data);//hello world!
+        }
+    };
+    if (typeof window.addEventListener !== 'undefined') {
+        window.addEventListener('message', onmessage, false);
+    } else if (typeof window.attachEvent !== 'undefined') {
+        // for IE
+        window.attachEvent('message', onmessage);
+    }
+
+    // addEventListener  attachEvent  
+
+</script>
+</body>
+</html>
