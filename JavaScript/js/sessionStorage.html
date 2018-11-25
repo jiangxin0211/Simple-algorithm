@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localStorage/sessionStorage</title>
+</head>
+<body>
+
+
+<script>
+    var data = new Date();
+    date.setDate(25);
+    document.cookie = 'name=lisi; expires=' + date;
+    document.cookie = 'age=18';
+    console.log(document.cookie);
+
+    sessionStorage.name = 'aadd';// 关闭浏览器就删除了
+    console.log(sessionStorage.name);// 不同浏览器窗口不共享
+
+    localStorage.age = 20;// 一直有，除非手动删除
+    console.log(localStorage.age);//  所有同源窗口都共享
+</script>
+</body>
+</html>

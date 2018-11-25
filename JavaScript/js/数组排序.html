@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组排序</title>
+</head>
+<body>
+<script>
+    /*
+    乱序数组排序
+     */
+    exports.sortNumber = function (arr) {
+        return arr.sort(function(a,b){
+            return a - b; // 从小到大
+        });
+    }
+      // 顺序数组打乱顺序
+
+    exports.sortNumber = function(arr){
+        return arr.sort(function(a,b){
+            return 0.5 - Math.random();
+        });
+    }
+
+</script>
+</body>
+</html>

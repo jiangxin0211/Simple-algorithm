@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生AJAX</title>
+</head>
+<body>
+<input type="button" id="btn" value="click">
+<div id="div1"></div>
+<script>
+
+    var oBtn = document.getElementById('btn')
+
+    var oDiv1 = document.getElementById('div1')
+
+    oBtn,onclick = function () {
+        // 创建XMLHttpRequest对象
+        if (window.XMLHttpRequest) {
+            var xmlHttp = new XMLHttpRequest();
+        }  else {
+            var xmlHttp = ActiveXObject('Microsoft.XMLHTTP')
+        }
+
+        // 发送请求
+        xmlHttp.open('GET', 'server.php', true)// true代表异步,不刷新页面
+
+        xmlHttp.send();
+
+        // POST请求方式要加请求头
+        // xmlHttp.open('POST', 'server.php', true)// true代表异步
+        // xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        // xmlHttp.send('name=cc&age=20');
+
+        xmlHttp.onreadystatechange = function () {// 存储函数，每当readyState属性改变时，就会调用该函数
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                oDiv1.innerHTML = xmlHttp.responseText// 把div1中的内容置成返回服务器的数据
+            }
+        }
+    }
+
+    /*
+        readyState:存有XMLHttpRequest的状态，从0-4发生变化
+                    0：请求未初始化
+                    1：服务器连接已建立
+                    2：请求已接收
+                    3：请求处理中
+                    4：请求已完成，且响应已就绪
+         status: 200:服务器成功返回
+                 301:永久重定向 URL已移走，需客户端重新定向到其他URL
+                 302:临时重定向
+                 304：客户端所请求的  URL未发生变化
+                 400：服务器不理解请求的语法
+                 403：客户端的请求被服务端禁止
+                 404:资源找不到
+                 500:服务器错误
+                 502：错误的网关
+     */
+
+</script>
+</body>
+</html>

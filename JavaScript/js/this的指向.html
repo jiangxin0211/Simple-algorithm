@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this的指向</title>
+    <style>
+        #div1{
+            background: #BD503A;
+            width: 200px;
+            height: 200px;
+        }
+        #div2 {
+            width: 100px;
+            height: 100px;
+            background: #07A8CA;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2"></div>
+</div>
+
+
+
+<script>
+    // 1
+    setTimeout(function () {
+        console.log(this);// window
+    }, 1000);
+
+    // 2
+    function aa(){// 全局声明的函数
+        console.log(this); // window
+    }
+
+    aa();
+
+    // 3
+    obj = {
+        name: 'xixixi',
+        say: function () {
+            console.log(this);// obj
+        }
+    }
+
+    obj.say();
+
+    // 4
+
+    var oDiv1 = document.getElementById('div1')
+    var oDiv2 = document.getElementById('div2')// div2没绑定事件的时候点击也输出div1，也冒泡
+    oDiv1.onclick = function (e) {
+        var target = e.target || window.event.srcElement;// 获取事件源
+        console.log(this);// div1
+        console.log(target);// div2 target点击的是谁就输出谁
+    }
+    oDiv2.onclick = function () {
+        console.log(this);// div1 div2
+    }
+
+    // 总体的输出顺序是：div2的this  div1的this   target
+
+</script>
+</body>
+</html>

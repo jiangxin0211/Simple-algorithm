@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+<ul>
+    <li>01</li>
+    <li>02</li>
+    <li>03</li>
+</ul>
+<script>
+    /*
+    闭包： 外部函数里面声明内部函数，内部函数引用外部函数里的局部变量，
+          当外部函数调用完毕后，局部变量不被释放，可以一直使用。
+     */
+    var aLi = document.getElementsByTagName('li')
+    for (var i=0; i<aLi.length; i++) {
+        // aLi[i].index = i; // 给每一个i都绑定一个index，就会把每一个i都输出
+        aLi[i].onclick = function () {
+            console.log(i)// 输出一个3
+        }
+    }
+
+    var aLi = document.getElementsByTagName('li')
+    for (var i=0; i<aLi.length; i++) {
+        (function(index){// 函数的立即调用
+            aLi[i].onclick = function () {
+                console.log(index++) // index是外部函数的局部变量
+            }
+        })(i);
+    }
+
+
+</script>
+</body>
+</html>
