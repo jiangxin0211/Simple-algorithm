@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>整数反转</title>
+</head>
+<body>
+<script>
+    function reverse(x) {
+        var numericalRangeLeft = Math.pow(-2,31);
+        var numericalRangeRight = Math.pow(2,31) - 1;
+        var numstring = x.toString().split(''); // 变成字符串并分隔
+        if (numstring[0] === '-') {
+            var numReverse = numstring.reverse(); // 颠倒数组中的元素数据
+            var num1 = numReverse.join(''); // 把数组中的所有元素放入一个字符串,用指定分隔符分隔
+            var num2 = parseInt(num1); // 解析一个字符串并返回整数
+            if (-num2 < numericalRangeLeft) {
+                return 0
+            }
+            return -num2;
+        } else {
+            var numReverse = numstring.reverse();
+            var num1 = numReverse.join('');
+            var num2 = parseInt(num1);
+            if (num2 > numericalRangeRight) {
+                return 0
+            }
+            return num2;
+        }
+    };
+
+    console.log(reverse(-12356789)) // -98765321
+</script>
+</body>
+</html>

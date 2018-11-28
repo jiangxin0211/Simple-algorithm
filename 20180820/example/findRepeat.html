@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查重</title>
+</head>
+<body>
+<script>
+    function duplicates(arr) {
+        var res = []
+        arr.sort()
+        for (var i = 0; i < arr.length; i++) {
+            if (arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i]) && res.indexOf(arr[i]) === -1) {
+                res.push(arr[i])
+            }
+            i = arr.lastIndexOf(arr[i])
+        }
+        return res
+    }
+
+    console.log(duplicates([1,5,2,4,2,3,1,8,4,2,6]))// [1, 2, 4]
+</script>
+</body>
+</html>

@@ -42,6 +42,9 @@
                       浏览器中不同域的框架之间不能进行js交互操作
                       不同的框架之间是可以获取window对象的，但是不可获取对象的属性和方法
      */
+    /*
+    其它诸如中间件跨域，服务器代理跨域，Flash URLLoader跨域，动态创建script标签（简化版本的jsonp）
+     */
     // 在www.a.com/a.html中
     document.domain = 'a.com';
     var ifr = document.createElement('iframe');
