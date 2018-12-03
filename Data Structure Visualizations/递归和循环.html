@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>堆</title>
+</head>
+<body>
+<script>
+    /*
+
+     */
+    function add(n) {
+        return n<=0 ? 0 : n + add(n-1); // 递归
+    }
+
+    function addA(n){ // 循环
+        var result = 0;
+        for (var i = 1; i <= n; ++i) {
+            result += i
+        }
+        return result
+    }
+
+    // console.log(add(10))
+    // console.log(addA(10))
+
+    /*
+    斐波那契数列：1.递归:栈溢出
+                2. O(n):迭代，由f(0) + f (1) = f(2) ……
+                3. O(logn): 数学公式，数学归纳法。
+     */
+
+    function f1 (n) {
+        if (n <= 1) {
+            return n;
+        }
+        var one = 0;
+        var two = 1;
+        var res = 0;
+
+        for (var i = 2; i <= n; i++) {
+            res = one + two;
+            one = two;
+            two = res;
+        }
+        return res;
+    }
+
+    // console.log(f1(2)) // 1
+    // console.log(f1(3)) // 2
+    // console.log(f1(4)) // 3
+    // console.log(f1(5)) // 5
+    // console.log(f1(6)) // 8
+    // console.log(f1(7)) // 13
+    // console.log(f1(8)) // 21
+    // console.log(f1(9)) // 34
+
+    function jumpFloor(n){
+        if (n <= 1) {
+            return n;
+        }
+        var one = 1;
+        var two = 2;
+        var res = 0;
+
+        for (var i = 3; i <= n; i++) {
+            res = one + two;
+            one = two;
+            two = res;
+        }
+        return res;
+    }
+
+    console.log(jumpFloor(2)); // 0
+    console.log(jumpFloor(3)); // 3
+    console.log(jumpFloor(4)); // 5
+    console.log(jumpFloor(5)); // 8
+    console.log(jumpFloor(6)); // 13
+    console.log(jumpFloor(7)); // 21
+
+
+
+
+
+
+    // 二进制数中1的个数
+
+    function numberOne(n){
+        var count = 0;
+        while (n) {
+            count++;
+            n = n & (n - 1);
+        }
+        return count
+    }
+
+    // console.log(numberOne(8)); // 1
+    // console.log(numberOne(7)); // 3
+    // console.log(numberOne(-1)); // 32
+    // console.log(numberOne(-8)); // 29
+    // console.log(numberOne(-7)); // 30
+
+
+</script>
+</body>
+</html>

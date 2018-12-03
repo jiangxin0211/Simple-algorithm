@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>奇数位于偶数的前面</title>
+</head>
+<body>
+<script>
+
+    /*
+    调整数组位置，使奇数位于数组的前半部分，偶数位于数组的后半部分
+    `   扫描这个数组，如果遇见偶数位于奇数的前面，就调换位置
+        维护两个指针，第一个指针初始化时指向数组的第一个位置，只向后移动，
+        第二个指针，指向数组的末尾，只向前移动。
+        直到第二个指针移动到了第一个指针前面，证明所有的奇数都在偶数的前面
+        {1,2,3,4,5}=>{1,5,3,4,2}
+     */
+
+    function reOrderArray (array) {
+        if (array.length <= 1) {
+            return;
+        }
+
+        var left = array.begin();
+        var right = array.end() - 1;
+
+
+        while(left < right)// 解耦
+            //while(left != right)
+        {
+            //system("PAUSE");
+
+            //  left向后移动指向第一个偶数
+            while(left < right && (*left & 0x01) == 1)
+            {
+                left++;
+            }
+
+            // right向前移动指向第一个奇数
+            while(left < right && (*right &0x01) == 0)
+            {
+                right--;
+            }
+            debug <<"left = " <<*left <<", right = " <<*right <<endl;
+
+            if(left < right)
+            {
+                swap(*left, *right);
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

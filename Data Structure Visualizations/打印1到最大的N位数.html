@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打印1到最大的N位数</title>
+</head>
+<body>
+
+<script>
+    /*
+        对打印的数值是否有要求，小数保留几位？
+        仔细分析你就会发现，N的范围并不确定，我们没法保证这些数是不是超出了INT_MAX的表示范围。
+        当n过大的时候，就会溢出，这时候我们的程序输出的值是不确定或者说是被截断的
+     */
+    // function printMax (n) {
+    //     var max = Math.pow(10, n)
+    //     for (var i = 1; i<max; i++) {
+    //         console.log(i);
+    //     }
+    // }
+    // printMax(2)
+
+    /*
+    字符串是解决大数问题最优的方案
+        1.初始就开辟一个N+1大小的串，用来存储数字
+        2.用字符串模拟数字的自增，进位，输出
+        3.当串长度超过N+1时，或者第0位产生进位时就溢出
+     */
+
+    /*
+    递归，转换成数字排列的解法：
+        1.全排列用递归很容易表示，数字的每一位都可能是0~9中的一个数，然后设置下一位。
+        2.递归结束的条件是我们已经设置了数字的最后一位
+     */
+
+    function printMaxDigits (n) {
+        if (n <= 0) {
+            return
+        }
+        var number = new Array(n + 1);
+        number[n] = '\0';
+        //  最地位循环0~9
+        for(var i = 0; i < 10; i++)
+        {
+            console.log('now list all' + i +'in the low position')
+            number[0] = i + '0';
+            recursively(number, n, 0);
+        }
+
+        delete number;
+    }
+
+    function recursively (number, length, index) {
+        if (number === length -1) {
+            console.log('we find a number');
+            printNumber(number);
+            return;
+        }
+        //  当前位循环0~9
+        for(var i = 0; i < 10; i++)
+        {
+            number[index + 1] = i + '0';
+            console.log('now,index=' + index + ', digit =' + number[index + 1]);
+            recursively(number, length , index + 1);
+        }
+    }
+
+    function printNumber(number){
+        var length = number.length;
+        for(var i = 1; i < length; i++)
+        {
+            if(number[i] !== '0')
+            {
+                break;
+            }
+        }
+        if(i !== length)         //  开始的0不应该输出
+        {
+            console.log(number[i])
+        }
+    }
+
+    printMaxDigits(1)
+</script>
+</body>
+</html>

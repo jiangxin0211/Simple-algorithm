@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>包含min函数的栈</title>
+</head>
+<body>
+<script>
+
+    /*
+    找到栈的最小元素，min,pop,push的时间复杂度都是O(1)
+     */
+
+    var stackData = [];
+    var stackMin = [];
+    function pushStack(value){
+        stackData.push(value);
+        var lastOne = stackMin[stackMin.length - 1]
+        if (stackMin.length === 0 || value < lastOne) {
+            stackMin.push(value);
+        } else {
+            stackMin.push(lastOne);
+        }
+    }
+    function popStack(value){
+        if (stackData.length > 0 && stackMin.length > 0) {
+            stackData.pop(value)
+            stackMin.pop(value)
+        }
+    }
+    // function min(){
+    //     if (stackData.empty() === true) {
+    //         return 0;
+    //     }
+    //     return stackMin.top();
+    // }
+    // function topele(){
+    //     if (stackData.length > 0 && stackMin.length >0) {
+    //         return stackData.top()
+    //     }
+    // }
+    pushStack(3)
+    console.log(stackData)
+    console.log(stackMin)
+    pushStack(4)
+    console.log(stackData)
+    console.log(stackMin)
+    pushStack(2)
+    console.log(stackData)
+    console.log(stackMin)
+    pushStack(1)
+    console.log(stackData)
+    console.log(stackMin)
+    popStack()
+    console.log(stackData)
+    console.log(stackMin)
+    popStack()
+    pushStack(0)
+    console.log(stackData)
+    console.log(stackMin)
+
+</script>
+</body>
+</html>

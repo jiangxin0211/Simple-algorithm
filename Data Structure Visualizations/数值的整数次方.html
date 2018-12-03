@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数值的整数次方</title>
+</head>
+<body>
+
+<script>
+
+    // 方法不够高效，没考虑边界，当是0或负数的时候？
+    // function powNormal(base, exponent) {
+    //     var res = 1;
+    //     for (var i = 0; i < exponent; i++) {
+    //         res *= base;
+    //     }
+    //     return res;
+    // }
+
+    // console.log(pow(2, 0));// 1;
+    // console.log(pow(2, 3));// 8;
+    function equal(left, right) {
+        if (Math.abs(left - right) < 0.0000001) {// fabs取绝对值
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function pow (base, exponent) {
+        if (exponent === 0) {
+            return 1.0
+        }
+        if (equal(base, 0.0) === true && exponent < 0) {
+            console.log("异常，底数为0的时候，指数不能为负数")
+            return 0.0
+        }
+
+        var res = 1.0;
+        if (exponent > 0) {
+            res = powNormal(base, exponent);
+        } else {
+            res = powNormal(base, -exponent);
+            res = 1/res;
+        }
+        return res;
+    }
+
+    console.log(pow(2, -3))// 0.125
+    console.log(pow(0, -1))// 0
+    console.log(pow(2, 2))// 4
+    console.log(pow(-2, 3))// -8
+
+
+
+    /*
+     位运算，全面且高效的算法
+        1.写出指数的二进制表达，例如13表达为二进制1101。
+        2.举例:10^1101 = 10^000110^010010^1000。
+        3.通过&1和>>1来逐位读取1101，为1时将该位代表的乘数累乘到最终结果。
+      */
+
+    // 循环
+    // function powNormal(base, exponent) {
+    //     if(exponent === 0)
+    //     {
+    //         return 1;
+    //     }
+    //     else if(exponent === 1)
+    //     {
+    //         return base;
+    //     }
+    //
+    //     var  res = 1, temp = base;
+    //     while(exponent !== 0)
+    //     {
+    //         if((exponent & 1) === 1) //  当前指数为不为0
+    //         {
+    //             res *= temp;        //  就计算一个乘积
+    //         }
+    //         //  移位后, curr需要翻倍, 这样到下个
+    //         temp *= temp;           // 翻倍
+    //         exponent >>= 1;         // 右移一位
+    //     }
+    //     return res;
+    // }
+
+
+    // 递归
+    function powNormal(base, exponent) {
+        if(exponent === 0)
+        {
+            return 1;
+        }
+        else if(exponent === 1)
+        {
+            return base;
+        }
+        var res = powNormal(base, exponent >> 1);
+        res *= res;
+        if((exponent & 1) === 1)
+        {
+            res *= base;
+        }
+
+        return res;
+    }
+
+
+</script>
+</body>
+</html>

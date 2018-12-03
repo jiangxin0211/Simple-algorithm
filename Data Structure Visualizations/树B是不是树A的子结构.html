@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>树B是否是树A的子结构</title>
+</head>
+<body>
+
+<script>
+
+
+    function binaryTree(){
+        var Node = function (key) {
+            this.key = key;
+            this.left = null;
+            this.right = null;
+        }
+        function doesParentHaveChild(parent, child){
+            var parent = new Node()
+            if (child.key === null) {
+                return true;
+            } else if (parent.key === null) {
+                return false;
+            }
+
+            //  两个节点的值不相等，那么两个树必然不是父子关系
+            if (child.key !== parent.key) {
+                return false;
+            } else {// 否则当前节点当前相等，则递归的判断左子树和右子树对应节点是否相同
+                return doesParentHaveChild(parent.left, child.left) && doesParentHaveChild(parent.right, child.right)
+            }
+        }
+        function hasSubTree(parent, child){
+            if(child.key === null || parent.key === null) {
+                return false;
+            }
+
+            var result;
+            //  如果当前父树的节点与子树的根节点相同，则直接从父树的当前位置开始判定
+            if(parent.key === child.key) {
+                result = doesParentHaveChild(parent.key, child.key);
+            }
+
+            if(result !== true) {
+                return hasSubtree(parent.left, child)      //  从左子树查找
+                    || hasSubtree(parent.right, child);        //  从右子树中查找
+            } else {
+                return true;
+            }
+        }
+    }
+</script>
+</body>
+</html>
