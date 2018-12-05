@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单的双向数据绑定</title>
+    <style>
+        #txt{
+            width: 300px;
+            height: 75px;
+        }
+        #show-txt{
+            width: 400px;
+            height: 40px;
+            background: #cccccc;
+        }
+        #a{
+            width: 300px;
+            height: 75px;
+        }
+        #b{
+            width: 400px;
+            height: 40px;
+            background: #cccccc;
+        }
+    </style>
+</head>
+<body>
+<!--<div id="app">-->
+    <!--<input type="text" id="txt">-->
+    <!--<p id="show-txt"></p>-->
+
+<!--</div>-->
+<div id="app">
+    <input type="text" id="a">
+    <p id="b"></p>
+</div>
+
+<script>
+
+    /*
+    vue采用的数据劫持+发布/订阅模式的方式，通过Object.defineProperty()来劫持各个属性的setter和getter，
+    在数据变动时发布消息给订阅者（wacther），触发响应的监听回调。
+     */
+    var obj = {};
+    Object.defineProperty(obj, 'txt', {// 访问器属性会覆盖同名的普通属性
+        get: function () {
+            return obj;
+        },
+        set: function (newValue) {
+          document.getElementById('txt').value = newValue;
+          document.getElementById('show-txt').innerHTML = newValue;
+        }
+    })
+
+    document.addEventListener('keyup', function (e) {
+        obj.txt = e.target.value;
+    })
+
+    obj.txt;//读取属性，调用get方法
+    obj.txt = '123'; // 修改属性，调用set方法
+
+    // 文档片段
+    var dom = nodeToFragment(document.getElementById('app'))
+    console.log(dom)
+
+    function nodeToFragment (node) {
+        var flag = document.createDocumentFragment();
+        var child;
+        while (child = node.firstChild) {
+            compile(node, vm);
+            flag.append(child);// 劫持node所有子节点
+        }
+        return flag;
+    }
+
+    // document.getElementById('app').appendChild(dom);// 返回到app中,插入挂载目标
+
+    // 数据初始化
+    function compile (node, vm) {
+        var reg = /\{\{(.*)\}\}/;
+        // 节点类型为元素
+        if (node.nodeType === 1) {
+            var attr = node.attributes;
+            // 解析属性
+            for (var i = 0; i < attr.length; i++) {
+                if (attr[i].nodeName === 'v-model') {
+                    var name = attr[i].nodeValue;// 获取v-model绑定的属性名
+                    node.value = vm.data[name];// 将data的值赋给该node
+                    node.removeAttribute('v-model');
+                }
+            }
+        }
+        // 节点类型为text
+        if (node.nodeType === 3) {
+            if (reg.text(node.nodeValue)) {
+                var name = RegExp.$1;// 获取匹配到的字符串
+                name = name.trim();
+                node.nodeValue = vm.data[name];// 将data的值赋给该node
+            }
+        }
+    }
+
+    function Vue(options){
+        this.data = options.data;
+        var id = options.el;
+        var dom = nodeToFragment(document.getElementById(id), this);
+        // 编译完成后将dom返回到app中
+        document.getElementById(id).appendChild(dom);
+    }
+
+    var vm = new Vue({
+        el: 'app',
+        data: {
+            text: 'hello world'
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+    /*
+    DocumentFragment（文档片段）可以看作节点容器，它可以包含多个子节点，当我们将它插入到 DOM 中时，
+    只有它的子节点会插入目标节点，所以把它看作一组节点的容器。使用 DocumentFragment 处理节点，速度和性能远远优于直接操作 DOM。
+    Vue 进行编译时，就是将挂载目标的所有子节点劫持（真的是劫持，通过 append 方法，DOM 中的节点会被自动删除）
+    到 DocumentFragment 中，经过一番处理后，再将 DocumentFragment 整体返回插入挂载目标。
+     */
+
+    // var event = new Event('build');
+    // // 订阅者订阅模式
+    // elem.addEventListener('build', function (e) {}, false);
+    // // 发布事件
+    // elem.dispatchEvent(event)
+    //
+    //
+    // // 更新数据
+    // function updateData(attr, value){
+    //     data[attr] = value;
+    //     pubSub.publish('model-update', attr, value);
+    // }
+    // // 订阅ui-update事件
+    // pubSub.subscribe('ui-update', function(attr, value){
+    //     updateData(attr, value);
+    // });
+    // // 订阅model -update事件
+    // pubSub.subscribe('model-update', function(attr, value){
+    //     //更新视图中所有单向绑定的值，用类似ng-bind的形式
+    //     for(var attr in data){
+    //         if( bindingsMap[attr] ){
+    //             bindingsMap[attr].forEach(function(item, index){
+    //                 item.innerHTML = data[attr];
+    //             })
+    //         }
+    //         //更新视图中所有双向绑定的值，用类似ng-model的形式
+    //         if(modelsMap[attr]){
+    //             modelsMap[attr].forEach(function(item, index){
+    //                 item.value = data[attr];
+    //             })
+    //         }
+    //     }
+    // });
+    // //视图数据修改，发布ui-update事件
+    // document.addEventListener('keyup', function( e ){
+    //     var ele = e.target;
+    //     var attr = ele.getAttribute('yc-model');
+    //     pubSub.publish('ui-update', attr, ele.value);
+    // })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组降维</title>
+</head>
+<body>
+
+<script>
+
+    /*
+    二维数组降维
+    1.两层循环，遍历降维
+    2.使用concat()
+    3.使用concat+apply
+     */
+    // var arr = [
+    //     ['h', 'e', 'l', 'l', 'o'],
+    //     ['m', 'y'],
+    //     ['w', 'o', 'r', 'l', 'd'],
+    //     ['!']
+    // ];
+
+    //  1.两层循环，遍历降维
+    // var result = [];
+    // for (var i = 0; i<arr.length; i++) {
+    //     for (var j = 0; j<arr[i].length; j++){
+    //         result.push(arr[i][j]);
+    //     }
+    // }
+    // console.log(result);
+
+
+    //2.使用concat()
+    // var result = [];
+    // for (var i = 0;i<arr.length; i++) {
+    //     result = result.concat(arr[i]);
+    // }
+    //
+    // console.log(result)
+
+
+    // 3.使用concat+apply
+    /*
+    apply方法会调用一个函数，apply方法的第一个参数会作为被调用函数的this值，apply方法的第二个参数（一个数组，或类数组的对象）
+    会作为被调用对象的arguments值，也就是说该数组的各个元素将会依次成为被调用函数的各个参数；
+     */
+
+    // var result = Array.prototype.concat.apply([], arr);
+    // console.log(result);
+
+
+
+    /*
+    多维数组降维：递归  ||  栈方法
+     */
+
+    // 递归
+    Array.prototype.deepFlatten = function () {
+        var result = [];
+        this.forEach(function (val) {
+            if (Array.isArray(val)) {// 判断是否是数组的子数组
+                val.forEach(arguments.callee);// 是子数组，则递归执行;  消除紧密耦合，不推荐使用，每次递归都要重新调用影响浏览器性能，影响闭包
+            } else {
+                result.push(val)
+            }
+        });
+        return result;
+    }
+
+    var arr = [2, 3, [2, 2],
+        [3, 'f', ['w', 3]], { "name": 'Tom' }
+    ];
+    console.log(arr.deepFlatten()); //=>[ 2, 3, 2, 2, 3, 'f', 'w', 3, { name: 'Tom' } ]
+
+
+    // 栈方法
+    Array.prototype.deepFlattenI = function () {
+        var result = [];
+        var stack = this;// 将数组放入栈中
+        while (stack.length !== 0) { // 如果栈不为空循环
+            var val = stack.pop(); // 取出最后一个值
+            if(Array.isArray(val)){ // 判断是不是数组，如果是就拼入栈中
+                stack = stack.concat(val);
+            } else {
+                result.unshift(val);// 如果不是数组就取出放入结果数组中
+            }
+        }
+        return result;
+    }
+    var array = [2, 3, [2, 2],
+        [3, 'f', ['w', 3]], { "name": 'Tom' }
+    ];
+    console.log(array.deepFlattenI()); //=>[ 2, 3, 2, 2, 3, 'f', 'w', 3, { name: 'Tom' } ]
+
+
+
+    var arr1 = [1,2,3,4,5];
+    var arr2 = [...arr1, 7,7,7];// 扩展运算符...
+    console.log(arr2);// [1, 2, 3, 4, 5, 7, 7, 7]
+
+    let map = new Map([
+        [1, 'one'],
+        [2, 'two'],
+        [3,'three']
+    ]);
+
+    let arr3 = [...map.values()];// 键值
+    let arr4 = [...map.entries()]; // 键值对
+    let arr5 = [...map.keys()];// 键名
+    console.log(arr3);
+    console.log(arr4);
+    console.log(arr5);
+
+    let arr6 = [1,2,[3,4,[5],7],8]
+    console.log(arr6.flat());// 只能拉平二维数组
+
+    /*
+    Object.assign(target,source);浅拷贝，用于对象的合并，将源对象的所有可枚举的属性复制到目标对象
+     */
+    var array1 = [1,2,3];
+    var array2 = [1,5];
+    var o = Object.assign(array1, array2);// 浅拷贝
+    console.log(array1);// [1,5,3]
+    console.log(array2);// [1,5]
+    console.log(o);// [1,5,3]
+
+
+</script>
+</body>
+</html>

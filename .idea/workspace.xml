@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d88670df-03e8-40ef-9303-4c1181dee0ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Data Structure Visualizations/打印1到最大的N位数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data Structure Visualizations/数值的整数次方.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data Structure Visualizations/树B是不是树A的子结构.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data Structure Visualizations/调整数组顺序，使奇数位于偶数的前面.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data Structure Visualizations/递归和循环.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/js/数组降维.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript/js/简单的双向数据绑定.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structure Visualizations/堆.html" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structure Visualizations/包含min元素的函数的栈.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/js/原生AJAX.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/js/原生AJAX.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/loading&amp;execution.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/loading&amp;execution.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/跨域/CORS.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/跨域/CORS.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +32,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="112" />
+          <entry key="html" value="120" />
           <entry key="js" value="9" />
           <entry key="json" value="1" />
           <entry key="test" value="2" />
@@ -43,7 +42,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="112" />
+          <entry key="HTML" value="120" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="9" />
           <entry key="PLAIN_TEXT" value="5" />
@@ -52,7 +51,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="38254" />
+          <entry key="html" value="43077" />
           <entry key="js" value="963" />
           <entry key="json" value="57" />
           <entry key="test" value="21" />
@@ -62,7 +61,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="38254" />
+          <entry key="HTML" value="43077" />
           <entry key="JSON" value="57" />
           <entry key="JavaScript" value="963" />
           <entry key="PLAIN_TEXT" value="298" />
@@ -78,17 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../charles-im.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/包含min元素的函数的栈.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+            <state relative-caret-position="150">
+              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -96,8 +86,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScript/十大排序算法/时间复杂度">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            <state relative-caret-position="210">
+              <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JavaScript/js/数组降维.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1305">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/递归和循环.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="66" column="28" lean-forward="true" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JavaScript/js/原生AJAX.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JavaScript/js/简单的双向数据绑定.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-75">
+              <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JavaScript/跨域/CORS.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JavaScript/loading&amp;execution.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -112,15 +156,17 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>xhr</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/todayList/TODOlist.html" />
-        <option value="$PROJECT_DIR$/todayList/TODOlist2.html" />
-        <option value="$PROJECT_DIR$/todayList/TODOlist3.html" />
         <option value="$PROJECT_DIR$/todayList/二叉树转换双向链表.html" />
         <option value="$PROJECT_DIR$/todayList/红包模拟器.html" />
         <option value="$PROJECT_DIR$/todayList/三只球队分数打平.html" />
@@ -148,14 +194,12 @@
         <option value="$PROJECT_DIR$/JavaScript/跨域/postMassage.html" />
         <option value="$PROJECT_DIR$/JavaScript/跨域/window.name.html" />
         <option value="$PROJECT_DIR$/JavaScript/跨域/CORS.js" />
-        <option value="$PROJECT_DIR$/JavaScript/跨域/CORS.html" />
         <option value="$PROJECT_DIR$/JavaScript/跨域/JSONP.html" />
         <option value="$PROJECT_DIR$/JavaScript/跨域/web sockets.html" />
         <option value="$PROJECT_DIR$/JavaScript/跨域/postMessage.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/闭包.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/this的指向.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/localStorage/sessionStorage.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/原生AJAX.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/数组排序.html" />
         <option value="$PROJECT_DIR$/20180820/quickSort.html" />
         <option value="$PROJECT_DIR$/20180820/example/findRepeat.html" />
@@ -169,6 +213,11 @@
         <option value="$PROJECT_DIR$/Data Structure Visualizations/调整数组顺序，使奇数位于偶数的前面.html" />
         <option value="$PROJECT_DIR$/Data Structure Visualizations/树B是不是树A的子结构.html" />
         <option value="$PROJECT_DIR$/Data Structure Visualizations/包含min元素的函数的栈.html" />
+        <option value="$PROJECT_DIR$/JavaScript/loading&amp;execution.html" />
+        <option value="$PROJECT_DIR$/JavaScript/js/原生AJAX.html" />
+        <option value="$PROJECT_DIR$/JavaScript/js/简单的双向数据绑定.html" />
+        <option value="$PROJECT_DIR$/JavaScript/跨域/CORS.html" />
+        <option value="$PROJECT_DIR$/JavaScript/js/数组降维.html" />
       </list>
     </option>
   </component>
@@ -199,12 +248,18 @@
             <path>
               <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="ES6" type="462c0819:PsiDirectoryNode" />
+              <item name="Data Structure Visualizations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
+              <item name="跨域" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
@@ -271,12 +326,12 @@
       <workItem from="1538984621174" duration="112000" />
       <workItem from="1538985623826" duration="5938000" />
       <workItem from="1542082115152" duration="15913000" />
-      <workItem from="1542716211906" duration="44873000" />
+      <workItem from="1542716211906" duration="60982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159626000" />
+    <option name="totallyTimeSpent" value="175735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -293,7 +348,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.061643835" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.08219178" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -319,27 +374,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/阶乘.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/high/test4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2897">
-          <caret line="200" column="6" selection-start-line="200" selection-start-column="6" selection-end-line="200" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/loading&amp;execution.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/20180820/example/flat方法实现.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -470,20 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/跨域/CORS.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="23" lean-forward="true" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/原生AJAX.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScript/跨域/location.hash.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="591">
@@ -530,13 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/十大排序算法/时间复杂度">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -588,24 +601,10 @@
         <state relative-caret-position="-24" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/递归和循环.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/数值的整数次方.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="85" column="8" lean-forward="true" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/调整数组顺序，使奇数位于偶数的前面.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -616,13 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript&amp;algorithm/二叉排序树BST.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="70" column="38" lean-forward="true" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/树B是不是树A的子结构.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -630,17 +622,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../charles-im.html">
+    <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/包含min元素的函数的栈.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        <state relative-caret-position="777">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/包含min元素的函数的栈.html">
+    <entry file="file://$PROJECT_DIR$/../../charles-im.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        <state relative-caret-position="150">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/调整数组顺序，使奇数位于偶数的前面.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/loading&amp;execution.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/跨域/CORS.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/递归和循环.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="66" column="28" lean-forward="true" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/js/原生AJAX.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript&amp;algorithm/二叉排序树BST.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="72" column="32" lean-forward="true" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/十大排序算法/时间复杂度">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/js/数组降维.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/js/简单的双向数据绑定.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
         </state>
       </provider>
     </entry>
