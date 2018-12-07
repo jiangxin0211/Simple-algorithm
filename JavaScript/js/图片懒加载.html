@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片懒加载</title>
+</head>
+<body>
+<div class="container">
+    <div class="img-area">
+        <img class="my-photo" alt="loading" data-src="./img/img1.png">
+    </div>
+    <div class="img-area">
+        <img class="my-photo" alt="loading" data-src="./img/img2.png">
+    </div>
+    <div class="img-area">
+        <img class="my-photo" alt="loading" data-src="./img/img3.png">
+    </div>
+    <div class="img-area">
+        <img class="my-photo" alt="loading" data-src="./img/img4.png">
+    </div>
+    <div class="img-area">
+        <img class="my-photo" alt="loading" data-src="./img/img5.png">
+    </div>
+</div>
+<script>
+
+    /*
+    通过document.documentElement.clientHeight获取屏幕可视窗口高度
+    通过element.offsetTop获取元素相对于文档顶部的距离
+    通过document.documentElement.scrollTop获取浏览器窗口顶部与文档顶部之间的距离，也就是滚动条滚动的距离
+    getBoundingClientRect
+    IntersectionObserver
+     */
+    // 判断元素是否在可视区
+    function isInSight(el) {
+        const bound = el.getBoundingClientRect();
+        const clientHeight = window.innerHeight;
+        //如果只考虑向下滚动加载
+        //const clientWidth = window.innerWeight;
+        return bound.top <= clientHeight + 100;
+    }
+
+    // 加载图片
+    function checkImgs() {
+        const imgs = document.querySelectorAll('.my-photo');
+        Array.from(imgs).forEach(el => {
+            if (isInSight(el)) {
+                loadImg(el);
+            }
+        })
+    }
+
+    function loadImg(el) {
+        if (!el.src) {
+            const source = el.dataset.src;
+            el.src = source;
+        }
+    }
+    //  函数节流（去抖）
+    function throttle(fn, mustRun = 500) {
+        const timer = null;
+        let previous = null;
+        return function() {
+            const now = new Date();
+            const context = this;
+            const args = arguments;
+            if (!previous){
+                previous = now;
+            }
+            const remaining = now - previous;
+            if (mustRun && remaining >= mustRun) {
+                fn.apply(context, args);
+                previous = now;
+            }
+        }
+    }
+
+    //
+</script>
+</body>
+</html>

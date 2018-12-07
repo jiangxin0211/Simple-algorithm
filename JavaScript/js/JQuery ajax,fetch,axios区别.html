@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax,fetch,axios</title>
+</head>
+<body>
+
+<script>
+    // 对原生XHR的封装，除此以外还增添了对JSONP的支持
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data: data,
+        dataType: dataType,
+        success: function () {},
+        error: function () {}
+    });
+
+    /*
+    Axios本质上也是对原生XHR的封装，只不过它是Promise的实现版本，符合最新的ES规范，从它的官网上可以看到它有以下几条特性:
+        从node.js创建http请求
+        支持promiseAPI
+        客户端支持防止CSRF
+        提供了一些并发请求的接口
+     */
+    axios({
+        method: 'get',
+        url: 'www.baidu.com',
+        data: {
+            firstName: 'Fred',
+            lastName: 'Flintstone'
+        }
+    }).then((res) => {
+        console.log(res)
+    }).catch((err) => {
+        console.log(err)
+    })
+
+
+    // fetch，ajax的替代品，更加原生底层。
+    // 更加底层，提供的API丰富（request, response）
+    // 脱离了XHR，是ES规范里新的实现方式
+    try {
+        let response = await fetch(url);
+        let data = response.json();
+        console.log(data);
+    } catch(e) {
+        console.log("Oops, error", e);
+    }
+</script>
+</body>
+</html>

@@ -16,7 +16,8 @@
     xdr.onload = function () {
         console.log(xdr.responseText)
     }
-    xdr.open('get', 'http://wwww.baidu.com')
+    xdr.open('get', 'http://wwww.baidu.com');
+    xdr.contentType = 'application/x-www-form-urlencoded';// POST请求
     // ……
     xdr.send(null);
 
@@ -49,10 +50,10 @@
         return xhr;
     }
 
-    var request = createCORS('get', 'http://www.baidu.com');
+    var request = createCORSRequest('get', 'http://www.baidu.com');
     if (request) {
         request.onload = function () {
-          // ……
+          // …… 对request.responseText进行处理
         };
         request.send();
     }

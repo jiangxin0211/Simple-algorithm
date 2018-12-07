@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+
+<script>
+    // var name = "The Window";
+    // var object = {
+    //     name : "My Object",
+    //     getNameFunc : function(){
+    //         return function(){
+    //             return this.name;
+    //         };
+    //     }
+    // };
+    // console.log(object.getNameFunc()()); // The Window
+
+    // var name = "The Window";
+    // var object = {
+    //     name : "My Object",
+    //     getNameFunc : function(){
+    //         var that = this;
+    //         return function(){
+    //             return that.name;
+    //         };
+    //     }
+    // };
+    // console.log(object.getNameFunc()());// My Object
+
+
+    function fun(n,o) {
+        console.log(o)
+        return {
+            fun:function(m){
+                return fun(m,n);
+            }
+        };
+    }
+    var a = fun(0);// undefined
+    a.fun(1);// 0
+    a.fun(2);// 0
+    a.fun(3);// 0
+    var b = fun(0).fun(1).fun(2).fun(3);// undefined 0 1 2  内存不被释放
+
+    var c = fun(0).fun(1);// undefined 0
+    c.fun(2);// 1
+    c.fun(3);// 1
+
+    var obj = { "name":"runoob", "alexa":10000, "site":"www.runoob.com"};
+    var myJSON = JSON.stringify(obj);
+    console.log(myJSON)
+    var myData = JSON.parse('{ "name":"runoob", "alexa":10000, "site":"www.runoob.com" }')
+    console.log(myData)
+
+    console.log(typeof ('a' - 1))// number
+
+    for (var i = 0;i < 3;i++) {
+        setTimeout(function () {
+            console.log(i++)//  3 4 5
+        }, 0)
+        console.log(i)//  0 1  2
+    }
+    // 0 1 2 3 4 5
+
+    function bar() {
+        return foo
+        foo = 2
+        function foo() {}
+        var foo
+        foo = 'string'
+    }
+    console.log(bar())// f foo() {}
+
+
+</script>
+</body>
+</html>

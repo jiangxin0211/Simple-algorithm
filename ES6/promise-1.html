@@ -43,7 +43,7 @@
             client.onreadystatechange = handler;
             client.responseType = 'json';
             client.setRequestHeader('Accept','applicaction/json');
-            client.sent;
+            client.send();
         });
         return promise;
     }

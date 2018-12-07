@@ -12,12 +12,12 @@
      */
 
     function loadScript(url, func) {
-        var head = document.head || document.getElementByTagName('head')[0];
+        var head = document.head || document.getElementsByTagName('head')[0];
         var script = document.createElement('script');
         script.src = url;
 
         script.onload = script.onreadystatechange = function(){
-            if(!this.readyState || this.readyState=='loaded' || this.readyState=='complete'){
+            if(!this.readyState || this.readyState ==='loaded' || this.readyState ==='complete'){
                 func();
                 script.onload = script.onreadystatechange = null;
             }
