@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>刻度</title>
+</head>
+<body>
+<canvas id="draw" width="500" height="250" style="border: 1px solid #c3c3c3"></canvas>
+
+
+<script>
+    var draw = document.getElementById('draw');
+    if (draw.getContext) {
+        var ctx = draw.getContext('2d');
+    }
+    function drawLong (ctx) {
+        const step = Math.PI / 12
+        for (let i = 0; i < 15; i++) {
+            ctx.save()
+            ctx.beginPath()
+            ctx.rotate((i - 1) * step)
+            ctx.moveTo(88, 0)
+            ctx.lineTo((88 - 5), 0)
+            ctx.stroke()
+            ctx.closePath()
+            ctx.restore()
+        }
+    }
+    drawLong(ctx)
+    function drawShort (ctx) {
+        const step = Math.PI / 60
+        for (let i = 0; i < 77; i++) {
+            ctx.save()
+            ctx.beginPath()
+            ctx.rotate((i - 8) * step)
+            ctx.moveTo(88, 0)
+            ctx.lineTo((88 - 3), 0)
+            ctx.stroke()
+            ctx.closePath()
+            ctx.restore()
+        }
+    }
+    drawShort(ctx)
+</script>
+</body>
+</html>
