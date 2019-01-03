@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>次数最多的字符</title>
+</head>
+<body>
+
+
+<script>
+    /*
+    查找字符串中出现次数最多的字符，并输出次数
+     */
+
+    /*
+    1.字符串方法的解析从最初开始进行字符的截取，获取到第一个字符之后，根据这个字符进行字符串的拆分，此时，
+    拆分后的数组中就没有这个字符了。再将数组组合成字符串之后，原来的长度与当前字符串的长度做差值，
+    就能够获取到当前字符出现了几次。之后运用新的字符串，循环进行操作。需要注意的地方就是，对于出现次数相同的字符，也需要考虑。
+     */
+
+    function getMost (str) {
+        var maxNum = 0;
+        var maxChar = [];
+        while (str) {
+            var char = str.charAt(0);
+            var arr = str.split(char);
+            n = str.length - arr.join('').length;
+            str = arr.join('');
+            if(n > maxNum){
+                maxNum = n;
+                maxChar = [char];    // 放置数组元素
+            }else if( n === maxNum){
+                maxChar.push(char);    //出现次数相同的字符 存入数组里
+            }
+        }
+        return {'maxNum':maxNum, 'maxChar':maxChar}
+    }
+    var res = getMost('dsfshkgfareasfd');
+    console.log('出现次数最多的字符：'+ res.maxChar + ',出现次数：' + res.maxNum);
+
+
+
+
+    function maxArray(arr){
+        var map={};
+        for(var i=0; i<arr.length;i++){
+            map[arr[i]]? map[arr[i]]+= 1: map[arr[i]] =1;
+        }
+        var max = 0;
+        var maxItem=[];
+        for(var i in map){
+            if(map[i] >= max){
+                if(map[i] === max) maxItem.push(i);
+                max = map[i];
+            }
+        }
+        return maxItem;
+    }
+
+   console.log(maxArray([1,5,3,6,1]))
+</script>
+</body>
+</html>

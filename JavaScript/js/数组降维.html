@@ -46,7 +46,7 @@
     会作为被调用对象的arguments值，也就是说该数组的各个元素将会依次成为被调用函数的各个参数；
      */
 
-    // var result = Array.prototype.concat.apply([], arr);
+       // var result = Array.prototype.concat.apply([], arr);
     // console.log(result);
 
 
@@ -126,6 +126,11 @@
     console.log(o);// [1,5,3]
 
 
+    console.log(NaN == NaN);// false
+    console.log(NaN === NaN); // false
+
+    console.log(null == undefined);// true
+    console.log(null === undefined);// false
 </script>
 </body>
 </html>
