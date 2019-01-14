@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路由原理</title>
+</head>
+<body>
+
+
+<script>
+    /*
+    路由的本质就是监听URL的变化，然后匹配路由原则，渲染相应的页面，并且无需刷新
+    目前单页面使用路由只有两种实现方式：
+        1、hash模式
+            1.点击跳转或者浏览器历史跳转：触发hashchange事件
+            2.手动刷新：不会触发hashchange事件，也不会向服务器请求，而是通过load事件
+        2、history模式：H5新推出的功能，比hashURL更加美观
+            1.浏览器动作，包括回退，调用history.back():触发popstate事件
+            2.点击跳转：调用pushstate函数向浏览器历史添加一个状态，不会向服务器发请求
+            3.刷新页面或者输入URL：会向服务器请求，所以使用history需要后端配合重定向
+
+        都是DOM替换的方式更改页面内容
+     */
+    // www.test.com/##/就是hashURL，##后面的哈希值发生变化时，不会向服务器请求数据，可以通过hashchange事件来监听URL的变化，从而进行跳转
+
+
+
+</script>
+</body>
+</html>
