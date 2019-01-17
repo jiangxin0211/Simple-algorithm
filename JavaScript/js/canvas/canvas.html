@@ -53,30 +53,33 @@
         if (canvas.getContext){
             var ctx = canvas.getContext('2d');
             // 绘制笑脸
-            // ctx.beginPath();
-            // ctx.arc(75,75,50,0,Math.PI*2,true); // 绘制
-            // ctx.moveTo(110,75);
-            // ctx.arc(75,75,35,0,Math.PI,false); // 口(顺时针)
-            // ctx.moveTo(65,65);
-            // ctx.arc(60,65,5,0,Math.PI*2,true); // 左眼
-            // ctx.moveTo(95,65);
-            // ctx.arc(90,65,5,0,Math.PI*2,true); // 右眼
-            // ctx.stroke();
+            ctx.save();
+            ctx.beginPath();
+            ctx.rotate(60 * Math.PI / 180);
+            ctx.arc(75,75,50,0,Math.PI*2,true); // 绘制
+            ctx.moveTo(110,75);
+            ctx.arc(75,75,35,0,Math.PI,false); // 口(顺时针)
+            ctx.moveTo(65,65);
+            ctx.arc(60,65,5,0,Math.PI*2,true); // 左眼
+            ctx.moveTo(95,65);
+            ctx.arc(90,65,5,0,Math.PI*2,true); // 右眼
+            ctx.stroke();
+            ctx.restore();
 
-            // // 填充三角形
-            // ctx.beginPath();
-            // ctx.moveTo(25,25);
-            // ctx.lineTo(105,25);
-            // ctx.lineTo(25,105);
-            // ctx.fill();
+            // 填充三角形
+            ctx.beginPath();
+            ctx.moveTo(25,25);
+            ctx.lineTo(105,25);
+            ctx.lineTo(25,105);
+            ctx.fill();
             //
-            // // 描边三角形
-            // ctx.beginPath();
-            // ctx.moveTo(125,125);
-            // ctx.lineTo(125,45);
-            // ctx.lineTo(45,125);
-            // ctx.closePath();
-            // ctx.stroke();
+            // 描边三角形
+            ctx.beginPath();
+            ctx.moveTo(125,125);
+            ctx.lineTo(125,45);
+            ctx.lineTo(45,125);
+            ctx.closePath();
+            ctx.stroke();
 
             /*
             下面两个for循环，生成圆弧的行列（x,y）坐标。每一段圆弧的开始都调用beginPath()。
@@ -116,15 +119,15 @@
             // ctx.stroke();
 
             //三次贝塞尔曲线，绘制心形
-            ctx.beginPath();
-            ctx.moveTo(75,40);
-            ctx.bezierCurveTo(75,37,70,25,50,25);
-            ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
-            ctx.bezierCurveTo(20,80,40,102,75,120);
-            ctx.bezierCurveTo(110,102,130,80,130,62.5);
-            ctx.bezierCurveTo(130,62.5,130,25,100,25);
-            ctx.bezierCurveTo(85,25,75,37,75,40);
-            ctx.fill();
+            // ctx.beginPath();
+            // ctx.moveTo(75,40);
+            // ctx.bezierCurveTo(75,37,70,25,50,25);
+            // ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+            // ctx.bezierCurveTo(20,80,40,102,75,120);
+            // ctx.bezierCurveTo(110,102,130,80,130,62.5);
+            // ctx.bezierCurveTo(130,62.5,130,25,100,25);
+            // ctx.bezierCurveTo(85,25,75,37,75,40);
+            // ctx.fill();
         }
     }
     draw();

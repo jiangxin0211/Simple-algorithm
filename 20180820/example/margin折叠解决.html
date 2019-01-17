@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        .app{
+            width: 400px;
+            height: 400px;
+            background: #cccccc;
+            overflow: hidden;
+        }
+        .div1{
+            width: 100px;
+            height: 100px;
+            /*会和父元素app一起margin-top：20px*/
+            margin-top: 20px;
+            margin-bottom: 25px;
+            background-color: #BD503A;
+        }
+        .wrap{
+            overflow: hidden;
+        }
+        .div2{
+            width: 100px;
+            height: 150px;
+            margin: 30px 0 25px 0;
+            background-color:#07A8CA;
+        }
+        /*
+        margin折叠的解决方案：
+            1.父元素overflow：hidden
+            2.父元素position: absolute
+            3.用padding不用margin
+            4.让父元素生成一个块级格式化上下文：
+                float: left;
+                position: absolute;
+                display: inline-block/table-cell
+                overflow: hidden/auto
+        内部两个margin折叠解决：
+            1.给其中一个元素再包一层容器，让两个折叠的元素不在同一个BFC
+            两个元素属于同一个BFC就会产生margin折叠，所以解决的方法就是让两个元素不在同一个BFC
+         */
+    </style>
+</head>
+<body>
+
+<div class="app">
+    <div class="div1">div1</div>
+    <div class="wrap">
+        <div class="div2">div2</div>
+    </div>
+</div>
+<!--body自带8px的margin边距-->
+</body>
+</html>

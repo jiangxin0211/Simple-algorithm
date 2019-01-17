@@ -19,6 +19,16 @@
     }
 
     console.log(duplicates([1,5,2,4,2,3,1,8,4,2,6]))// [1, 2, 4]
+
+
+    var array = [1,5,2,4,2,3,1,8,4,2,6];
+    var repeatArr = array.map(function(){
+        for (let i=0; i<array.length; i++) {
+            if (array[0] === array[i]) {
+                return
+            }
+        }
+    })
 </script>
 </body>
 </html>
