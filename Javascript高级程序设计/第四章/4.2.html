@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>执行环境和作用域</title>
+</head>
+<body>
+    当代码在一个环境中执行的时候，会创建变量对象的一个作用域链
+    作用域链的用途是：保证对执行环境有权访问的所有变量和函数的有序访问
+    作用域链的前端始终是当前执行的代码所在环境的变量对象；这个对象在最开始是只包含一个变量就是arguments对象（它在全局中不存在）
+    作用域链的终端是全局执行环境的变量对象
+
+    标识符解析是按照作用域链一级一级的搜索的过程
+
+    <script>
+        // var color = "blue";
+        // function changecolor (){
+        //     if (color === "blue"){// 可以在函数内部访问color，就是因为color在作用域链中
+        //         color = "red";
+        //     } else {
+        //         color = "blue";
+        //     }
+        // }
+        // changecolor();
+        // console.log("color is now" + color);// red
+
+
+        var color = "blue";
+        function changecolor (){
+            var anothercolor = "red";
+            function swapColors() {
+                var tempColor = anothercolor;
+                anothercolor = color;
+                // 这里可以访问 color anothercolor tempcolor
+            }
+            // 这里可以访问 color anothercolor
+            swapColors()
+        }
+        // 这里可以访问 color
+        changecolor();
+
+
+        /*
+        延长作用域链：可以在作用域链的前端临时添加一个变量对象，该变量对象会在代码执行后被移除
+            1.try-catch语句的catch块：会创建一个新的变量对象，其中包含的是被抛出的错误对象的声明
+            2.with语句：会将指定的对象添加到作用域链中。
+         */
+        function bulidUrl(){
+            var qs = "?debug=true";
+            with(location){
+                var url = href + qs;
+            }
+            console.log(url)
+            return url;
+        }
+        bulidUrl();
+
+        if (true) {
+            var c = "yellow";
+        }
+        console.log(c);// yellow
+
+        for (var i=0; i<7; i++){
+            var num = 10;
+            console.log(i);// 0 1 2 3 4 5 6
+        }
+        console.log(i);// 7
+    </script>
+</body>
+</html>
