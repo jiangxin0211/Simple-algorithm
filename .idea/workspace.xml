@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d88670df-03e8-40ef-9303-4c1181dee0ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/20180820/example/margin折叠解决.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20180820/example/随机显示图片.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20180820/example/findRepeat.html" beforeDir="false" afterPath="$PROJECT_DIR$/20180820/example/findRepeat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/js/canvas/canvas.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/js/canvas/canvas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/deep copy.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/deep copy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/shallow copy.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/shallow copy.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,106 +15,51 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-406618122">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="11" />
-          <entry key="project.open.time.1" value="7" />
-          <entry key="project.open.time.2" value="4" />
-          <entry key="project.open.time.35" value="1" />
-          <entry key="project.open.time.53" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="15" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="198" />
-          <entry key="js" value="12" />
-          <entry key="json" value="1" />
-          <entry key="test" value="2" />
-          <entry key="vue" value="1" />
-          <entry key="时间复杂度" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="198" />
-          <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="12" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Vue.js" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="53452" />
-          <entry key="js" value="965" />
-          <entry key="json" value="57" />
-          <entry key="test" value="21" />
-          <entry key="vue" value="115" />
-          <entry key="时间复杂度" value="277" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="53452" />
-          <entry key="JSON" value="57" />
-          <entry key="JavaScript" value="965" />
-          <entry key="PLAIN_TEXT" value="298" />
-          <entry key="Vue.js" value="115" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts" />
-      <usages-collector id="statistics.vcs.git.usages" />
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/20180820/example/findRepeat.html">
+        <entry file="file://$PROJECT_DIR$/Node/16_httpresponse.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/20180820/example/随机显示图片.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JavaScript/js/canvas/canvas.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-173">
-              <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+            <state relative-caret-position="135">
+              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shop/放大镜/放大镜.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/base/shallow copy.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/deep copy.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Node/Express/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Node/Express/1_app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -142,32 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/JavaScript/js/this的指向.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/localStorage/sessionStorage.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/数组排序.html" />
-        <option value="$PROJECT_DIR$/20180820/quickSort.html" />
-        <option value="$PROJECT_DIR$/20180820/example/整数反转.html" />
-        <option value="$PROJECT_DIR$/JavaScript/跨域/document.domain.html" />
-        <option value="$PROJECT_DIR$/../../charles-im.html" />
-        <option value="$PROJECT_DIR$/Data Structure Visualizations/堆.html" />
-        <option value="$PROJECT_DIR$/Data Structure Visualizations/递归和循环.html" />
-        <option value="$PROJECT_DIR$/Data Structure Visualizations/数值的整数次方.html" />
-        <option value="$PROJECT_DIR$/Data Structure Visualizations/打印1到最大的N位数.html" />
-        <option value="$PROJECT_DIR$/Data Structure Visualizations/调整数组顺序，使奇数位于偶数的前面.html" />
-        <option value="$PROJECT_DIR$/Data Structure Visualizations/树B是不是树A的子结构.html" />
-        <option value="$PROJECT_DIR$/Data Structure Visualizations/包含min元素的函数的栈.html" />
-        <option value="$PROJECT_DIR$/JavaScript/loading&amp;execution.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/原生AJAX.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/简单的双向数据绑定.html" />
-        <option value="$PROJECT_DIR$/JavaScript/跨域/CORS.html" />
-        <option value="$PROJECT_DIR$/JavaScript/跨域/动态创建script.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/图片懒加载.html" />
-        <option value="$PROJECT_DIR$/Data Structure Visualizations/连续最大的累加和.js" />
-        <option value="$PROJECT_DIR$/Data Structure Visualizations/连续最大的累加和.html" />
-        <option value="$PROJECT_DIR$/ES6/promise-1.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/JQuery ajax,fetch,axios区别.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/SVG.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/canvas画刻度.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/canvas.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/canvas吃豆豆.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/canvas/path2D.html" />
@@ -193,14 +110,34 @@
         <option value="$PROJECT_DIR$/20180820/example/findRepeat.html" />
         <option value="$PROJECT_DIR$/20180820/example/随机显示图片.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/canvas/canvas.html" />
+        <option value="$PROJECT_DIR$/Node/create/server.js" />
+        <option value="$PROJECT_DIR$/Node/1_app.js" />
+        <option value="$PROJECT_DIR$/Node/readfile.js" />
+        <option value="$PROJECT_DIR$/Node/file" />
+        <option value="$PROJECT_DIR$/Node/2_readfile.js" />
+        <option value="$PROJECT_DIR$/Node/3_event.js" />
+        <option value="$PROJECT_DIR$/Node/4_module.js" />
+        <option value="$PROJECT_DIR$/Node/4_getmodule.js" />
+        <option value="$PROJECT_DIR$/Node/5_gethello.js" />
+        <option value="$PROJECT_DIR$/Node/5_hello.js" />
+        <option value="$PROJECT_DIR$/Node/6_debug.js" />
+        <option value="$PROJECT_DIR$/Node/7_nextTick.js" />
+        <option value="$PROJECT_DIR$/Node/8_util.inherits.js" />
+        <option value="$PROJECT_DIR$/Node/school/9_util.inspect.js" />
+        <option value="$PROJECT_DIR$/Node/10_events.js" />
+        <option value="$PROJECT_DIR$/Node/11_httpserver.js" />
+        <option value="$PROJECT_DIR$/Node/12_httpserverrequestget.js" />
+        <option value="$PROJECT_DIR$/Node/13_httpserverrequestpost.js" />
+        <option value="$PROJECT_DIR$/Node/httprequest.js" />
+        <option value="$PROJECT_DIR$/Node/15_httpget.js" />
+        <option value="$PROJECT_DIR$/Node/16_httpresponse.js" />
+        <option value="$PROJECT_DIR$/Node/17_httprequest.js" />
+        <option value="$PROJECT_DIR$/Node/Express/1_app.js" />
+        <option value="$PROJECT_DIR$/Node/Express/package.json" />
+        <option value="$PROJECT_DIR$/base/deep copy.html" />
+        <option value="$PROJECT_DIR$/base/shallow copy.html" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
@@ -223,18 +160,7 @@
             <path>
               <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="放大镜" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,12 +179,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Node" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Node" />
       <recent name="$PROJECT_DIR$/Vue" />
       <recent name="$PROJECT_DIR$/JavaScript/js/canvas" />
       <recent name="$PROJECT_DIR$/JavaScript/js" />
       <recent name="$PROJECT_DIR$/Node/create" />
-      <recent name="$PROJECT_DIR$/JavaScript/十大排序算法" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -299,17 +228,32 @@
       <workItem from="1542716211906" duration="88556000" />
       <workItem from="1545186761652" duration="398000" />
       <workItem from="1545188012196" duration="28491000" />
+      <workItem from="1550815596989" duration="11029000" />
     </task>
+    <task id="LOCAL-00001" summary="node:http">
+      <created>1550831124698</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1550831124698</updated>
+    </task>
+    <task id="LOCAL-00002" summary="node:mongodb">
+      <created>1550916125784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550916125784</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232198000" />
+    <option name="totallyTimeSpent" value="243227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20095314" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20095314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -320,9 +264,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4712329" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32876712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -331,8 +275,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="node:http" />
+    <MESSAGE value="node:mongodb" />
+    <option name="LAST_COMMIT_MESSAGE" value="node:mongodb" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -346,187 +292,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/SVG.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/canvas/canvas画刻度.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/canvas/canvas吃豆豆.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-202">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/canvas/path2D.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="8" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/canvas/透明度.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="8" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/canvas/虚线.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/canvas/动画/太阳系动画.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="26" column="48" lean-forward="true" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/canvas/渐变.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="7" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/canvas/动画/时钟.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-316">
-          <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/JQuery ajax,fetch,axios区别.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/事件托管.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/数组排序.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/闭包案例.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-528">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20180820/example/flat方法实现.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="15" column="77" lean-forward="true" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/sessionStorage.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/阶乘.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript&amp;algorithm/二叉排序树BST.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20180820/quickSort.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20180820/example/二分查找.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/原生AJAX.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="105" column="51" lean-forward="true" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20180820/example/字符串中出现次数最多的字符.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20180820/deepClone.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cors/CORS预检请求.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/Interview/浏览器渲染全过程.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/js/闭包.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript/跨域/JSONP.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/路由原理.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/Virtual DOM/why need VDOM.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="84" column="5" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScript/跨域/CORS.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -632,6 +397,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../charles-im.html" />
     <entry file="file://$PROJECT_DIR$/20180820/example/findRepeat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -639,39 +405,221 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/shop/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/20180820/example/随机显示图片.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../charles-im.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="28" lean-forward="true" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScript/js/canvas/canvas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-173">
-          <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+        <state relative-caret-position="780">
+          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shop/放大镜/放大镜.html">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript高级程序设计/第四章/4.1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-502" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/school/class.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/create/server.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/2_readfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/5_gethello.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/3_event.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/4_module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/4_getmodule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/5_hello.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/6_debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/7_nextTick.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/8_util.inherits.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/9_util.inspect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/10_events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/1_app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/11_httpserver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/12_httpserverrequestget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/13_httpserverrequestpost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/15_httpget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/14_httprequest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/17_httprequest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/Express/1_app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/code review.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/Express/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/16_httpresponse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/deep copy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/shallow copy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
