@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d88670df-03e8-40ef-9303-4c1181dee0ca" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/deep copy.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/deep copy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/shallow copy.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/shallow copy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/shallow copy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/轮播图/css/carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/轮播图/css/carousel.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,46 +19,41 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Node/16_httpresponse.js">
+        <entry file="file://$PROJECT_DIR$/轮播图/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+            <state relative-caret-position="357">
+              <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/base/shallow copy.html">
+        <entry file="file://$PROJECT_DIR$/轮播图/css/carousel.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="90">
+              <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/deep copy.html">
+        <entry file="file://$PROJECT_DIR$/轮播图/js/carousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state>
+              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+              <folding>
+                <element signature="e#27#31#1" expanded="true" />
+                <element signature="e#28#32#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Node/Express/package.json">
+        <entry file="file://$PROJECT_DIR$/轮播图/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Node/Express/1_app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="75">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -67,8 +63,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -77,6 +73,9 @@
       <find>xhr</find>
       <find>isUnique</find>
       <find>Set</find>
+      <find>play</find>
+      <find>changeImg</find>
+      <find>middle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,12 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/JavaScript/js/canvas.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/canvas吃豆豆.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/canvas/path2D.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/canvas/透明度.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/canvas/虚线.html" />
-        <option value="$PROJECT_DIR$/JavaScript/js/canvas/渐变.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/canvas/动画/太阳系动画.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/canvas/动画/时钟.html" />
         <option value="$PROJECT_DIR$/JavaScript/js/闭包案例.html" />
@@ -136,6 +129,12 @@
         <option value="$PROJECT_DIR$/Node/Express/package.json" />
         <option value="$PROJECT_DIR$/base/deep copy.html" />
         <option value="$PROJECT_DIR$/base/shallow copy.html" />
+        <option value="$PROJECT_DIR$/轮播图/css/index.css" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/轮播图/js/index.js" />
+        <option value="$PROJECT_DIR$/轮播图/js/carousel.js" />
+        <option value="$PROJECT_DIR$/轮播图/index.html" />
+        <option value="$PROJECT_DIR$/轮播图/css/carousel.css" />
       </list>
     </option>
   </component>
@@ -160,7 +159,29 @@
             <path>
               <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="20180820" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Data Structure Visualizations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Simple-algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simple-algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScript" type="462c0819:PsiDirectoryNode" />
+              <item name="跨域" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,7 +249,9 @@
       <workItem from="1542716211906" duration="88556000" />
       <workItem from="1545186761652" duration="398000" />
       <workItem from="1545188012196" duration="28491000" />
-      <workItem from="1550815596989" duration="11029000" />
+      <workItem from="1550815596989" duration="11205000" />
+      <workItem from="1551337364041" duration="14000" />
+      <workItem from="1551360843401" duration="15589000" />
     </task>
     <task id="LOCAL-00001" summary="node:http">
       <created>1550831124698</created>
@@ -244,16 +267,24 @@
       <option name="project" value="LOCAL" />
       <updated>1550916125784</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="aigeng面试题-轮播图">
+      <created>1551453649045</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1551453649045</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243227000" />
+    <option name="totallyTimeSpent" value="259006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20095314" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12152502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -264,7 +295,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4712329" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22054794" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32876712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -278,7 +309,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="node:http" />
     <MESSAGE value="node:mongodb" />
-    <option name="LAST_COMMIT_MESSAGE" value="node:mongodb" />
+    <MESSAGE value="aigeng面试题-轮播图" />
+    <option name="LAST_COMMIT_MESSAGE" value="aigeng面试题-轮播图" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -292,73 +324,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JavaScript/跨域/CORS.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/Virtual DOM/element.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/Virtual DOM/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/简单的双向数据绑定.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="67" column="18" lean-forward="true" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/响应式原理.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ES6/promise.prototype.then.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-394">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ES6/promise-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="11" lean-forward="true" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ES6/Promise.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-292" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ES6/async函数.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-571" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data Structure Visualizations/包含min元素的函数的栈.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/双向数据绑定.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1278">
@@ -569,17 +534,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Node/17_httprequest.js">
+    <entry file="file://$PROJECT_DIR$/Node/17_httprequest.js" />
+    <entry file="file://$PROJECT_DIR$/Node/package.json" />
+    <entry file="file://$PROJECT_DIR$/base/code review.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/shallow copy.html" />
+    <entry file="file://$PROJECT_DIR$/Node/16_httpresponse.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="135">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Node/package.json">
+    <entry file="file://$PROJECT_DIR$/base/deep copy.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="855">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node/Express/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -590,34 +568,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/code review.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Node/Express/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Node/16_httpresponse.js">
+    <entry file="file://$PROJECT_DIR$/轮播图/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/deep copy.html">
+    <entry file="file://$PROJECT_DIR$/JavaScript/跨域/JSONP.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/跨域/CORS.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="-411" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20180820/quickSort.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/shallow copy.html">
+    <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="465">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/轮播图/img/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/轮播图/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/轮播图/js/carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#27#31#1" expanded="true" />
+            <element signature="e#28#32#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/轮播图/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/轮播图/css/carousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
