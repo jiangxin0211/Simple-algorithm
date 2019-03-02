@@ -26,13 +26,48 @@
 </div>
 <button></button>
 <script>
-    for (var i = 0; i<9; i++) {
-        // console.log(i);
-        (res => {
-            console.log(i);
-        })()
+    // for (var i = 0; i<9; i++) {
+    //     // console.log(i);
+    //     (res => {
+    //         console.log(i);
+    //     })()
+    // }
+    // console.log(i);
+
+    /*
+    bind方法在ES5引入， 在Function的原型链上， Function.prototype.bind。通过bind方法绑定后，
+    函数将被永远绑定在其第一个参数对象上， 而无论其在什么情况下被调用。
+     */
+    function f(){
+        return this.a;
     }
-    console.log(i);
+
+    var g = f.bind({a:"azerty"});
+    console.log(g()); // azerty
+
+    var o = {a:37, f:f, g:g};
+    console.log(o.f(), o.g()); // 37, azerty
+
+    var name = 'sally';
+    function sayName(){
+        console.log (this.name,arguments)
+        return this.name;
+    }
+    var o = {
+        'name':'John',
+        sayName:sayName
+    };
+    var obj = {
+        'name': 'hihihi'
+    }
+
+    sayName();
+    // sayName.call(o,1,2,3);
+    var objectB = sayName.bind(o);
+    console.log(objectB());
+    // console.log(this.name);
+    // sayName.call(o,1,2,3);
+
 </script>
 </body>
 </html>
