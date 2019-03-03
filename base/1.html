@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h</title>
+</head>
+<body>
+
+<script>
+    console.log([1<2<3,3<2<1]);//[true,true]
+
+    var num = "1 2 3".replace(/\d/g, parseInt);
+    console.log(num);// 1 NaN 3
+
+    function showcase(value){
+        switch (value) {
+            case 'A':
+                console.log('Case A');
+                break;
+            case 'B':
+                console.log('Case B');
+                break;
+            case undefined:
+                console.log('undefined');
+                break;
+            default:
+                console.log('Do not know!');
+        }
+    }
+
+    showcase(new String('A'));// Do not know!
+</script>
+</body>
+</html>
