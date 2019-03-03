@@ -29,6 +29,21 @@
     }
 
     showcase(new String('A'));// Do not know!
+
+    function sum(arr){
+        var oddSum = 0, evenSum = 0;
+        for (var i in arr) {
+            arr[i] % 2 === 0 ? evenSum+=arr[i] : oddSum+=arr[i];
+        }
+        return{
+            "oddSum": oddSum,
+            "evenSum": evenSum
+        }
+    }
+
+    var arr = [2,3,4,7,4];
+    var result = sum(arr);
+    console.log(result.evenSum,result.oddSum);
 </script>
 </body>
 </html>
