@@ -44,6 +44,25 @@
     var arr = [2,3,4,7,4];
     var result = sum(arr);
     console.log(result.evenSum,result.oddSum);
+
+
+    function Array (arr) {
+        var even = [];
+        var odd = [];
+        for (var i in arr) {
+            arr[i] % 2 === 0 ? even.push(arr[i]) : odd.push(arr[i]);
+        }
+        // return {
+        //     "even": even,
+        //     "odd": odd
+        // }
+        return even.sort().concat(odd);
+    }
+
+    var arr2 = [4, 3,7,2,9,6];
+    var res = Array(arr2);
+    // console.log(res.even, res.odd);
+    console.log(res);
 </script>
 </body>
 </html>
