@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+    /*
+    1、获取目标值
+
+　　2、再获取初始值
+
+　　3、得到总距离
+
+　　4、定义定时器的执行间隔
+
+　　5、获取时间
+
+　　6、得到总次数
+
+　　7、总距离/总次数 = 步长
+
+　　8、使用setInterval不停地改变dom元素的每一个css值 让元素不停地改变样式 造成动画的错觉。
+
+　　9、定义一个计数器 每改变一次样式就累加一次 直到计数器大于等于总次数 此时说明执行完毕
+
+　　10、强行拉到终点
+
+　　11、停表
+
+　　12、执行回调函数
+    */
+
+
+    /*
+* animate 函数能够实现动画
+* @dom  要运动的元素
+* @json  css样式对象
+* @time  时间  以毫秒值为单位
+* callback 回调函数
+*/
+    function animate(dom, json, time, callback) {
+        // 定义定时器的间隔
+        var interval = 20;
+        // 定义总次数
+        var allCount = time / interval;
+        // 获取初始值
+        // 因为不确定json中有多少条css样式 所以不能写具体的代码条数
+        // 使用对应的思想 所以 我们也定义一个json
+        var nowJSON = {};
+        // 使用for循环获取初始值
+        for(var i in json) {
+            // 强制性的给nowJSON添加属性 并赋值
+            if(window.getComputedStyle) {
+                nowJSON[i] = parseInt(getComputedStyle(dom)[i]);
+            } else {
+                nowJSON[i] = parseInt(dom.currentStyle[i]);
+            }
+        }
+        // 定义步长json
+        var stepJSON = {};
+        for(var i in json) {
+            stepJSON[i] = (json[i] - nowJSON[i]) / allCount;
+        }
+        // 定义计数器
+        var count = 0;
+        var timer = setInterval(function() {
+            count++;
+            // 改变dom元素的css样式
+            for(var i in json) {
+                dom.style[i] = nowJSON[i] + stepJSON[i] * count + "px";
+            }
+            // 判断是否执行完毕
+            if(count >= allCount) {
+                // 停表
+                clearInterval(timer);
+                // 拉终
+                for(var i in json) {
+                    dom.style[i] = json[i] + "px";
+                }
+                // 回调函数执行
+                callback && callback();
+            }
+        }, interval);
+    }
+</script>
+</body>
+</html>
